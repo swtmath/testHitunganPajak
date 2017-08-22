@@ -1,0 +1,344 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8B664483-D718-47BB-B817-1DD9659979DB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>testPerhitunganPajak</RootNamespace>
+    <AssemblyName>testPerhitunganPajak</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="data\AppraisalRequest.cs" />
+    <Compile Include="data\AppraisalRequestComment.cs" />
+    <Compile Include="data\AppraisalRequestCompetencyCore.cs" />
+    <Compile Include="data\AppraisalRequestKPI.cs" />
+    <Compile Include="data\AttendanceMachine.cs" />
+    <Compile Include="data\Award.cs" />
+    <Compile Include="data\ClaimAdjustment.cs" />
+    <Compile Include="data\ClaimExtension.cs" />
+    <Compile Include="data\ClaimExtensionDetail.cs" />
+    <Compile Include="data\ClaimRequest.cs" />
+    <Compile Include="data\ClaimRequestDetail.cs" />
+    <Compile Include="data\C_AccountJournal.cs" />
+    <Compile Include="data\C_AccountJournalCostCenter.cs" />
+    <Compile Include="data\C_AccountJournalDetail.cs" />
+    <Compile Include="data\C_AccountJournalOrganization.cs" />
+    <Compile Include="data\C_AttachmentImage.cs" />
+    <Compile Include="data\C_AttendanceCode.cs" />
+    <Compile Include="data\C_AttendanceType.cs" />
+    <Compile Include="data\C_AutoNumber.cs" />
+    <Compile Include="data\C_AutoNumberDetail.cs" />
+    <Compile Include="data\C_AutoNumberPool.cs" />
+    <Compile Include="data\C_AutoNumberPoolDetail.cs" />
+    <Compile Include="data\C_BaseRate.cs" />
+    <Compile Include="data\C_BaseRateAttendanceCode.cs" />
+    <Compile Include="data\C_BaseRateDetail.cs" />
+    <Compile Include="data\C_BaseRateGroupType.cs" />
+    <Compile Include="data\C_BaseRateTag.cs" />
+    <Compile Include="data\C_BaseRateTag2.cs" />
+    <Compile Include="data\C_BlackListIdNumber.cs" />
+    <Compile Include="data\C_Branch.cs" />
+    <Compile Include="data\C_BranchAsset.cs" />
+    <Compile Include="data\C_Break.cs" />
+    <Compile Include="data\C_BreakDetail.cs" />
+    <Compile Include="data\C_Calendar.cs" />
+    <Compile Include="data\C_CalendarDetail.cs" />
+    <Compile Include="data\C_CashTransferField.cs" />
+    <Compile Include="data\C_CashTransferFieldDetail.cs" />
+    <Compile Include="data\C_Claim.cs" />
+    <Compile Include="data\C_ClaimDetail.cs" />
+    <Compile Include="data\C_Class.cs" />
+    <Compile Include="data\C_Company.cs" />
+    <Compile Include="data\C_Competency.cs" />
+    <Compile Include="data\C_CompetencyAppraisal.cs" />
+    <Compile Include="data\C_CompetencyBranch.cs" />
+    <Compile Include="data\C_CompetencyCore.cs" />
+    <Compile Include="data\C_CompetencyCoreAppraisal.cs" />
+    <Compile Include="data\C_CompetencyCoreGrade.cs" />
+    <Compile Include="data\C_CompetencyCoreKeyAction.cs" />
+    <Compile Include="data\C_CompetencyCoreScale.cs" />
+    <Compile Include="data\C_CompetencyFinalResult.cs" />
+    <Compile Include="data\C_CompetencyGrade.cs" />
+    <Compile Include="data\C_CompetencyJob.cs" />
+    <Compile Include="data\C_CompetencyJobResult.cs" />
+    <Compile Include="data\C_CompetencyKPI.cs" />
+    <Compile Include="data\C_CompetencyKPIResult.cs" />
+    <Compile Include="data\C_CostNotaDinas.cs" />
+    <Compile Include="data\C_CostNotaDinasActivity.cs" />
+    <Compile Include="data\C_CostNotaDinasActivityDetail.cs" />
+    <Compile Include="data\C_CostNotaDinasDetail.cs" />
+    <Compile Include="data\C_CostNotaDinasDetailJobTitle.cs" />
+    <Compile Include="data\C_CostNotaDinasDetailTypeSchedule.cs" />
+    <Compile Include="data\C_CostNotaDinasDetailTypeTransport.cs" />
+    <Compile Include="data\C_CostNotaDinasMatrix.cs" />
+    <Compile Include="data\C_CostNotaDinasMatrixDetail.cs" />
+    <Compile Include="data\C_CurrencyRate.cs" />
+    <Compile Include="data\C_CustomField.cs" />
+    <Compile Include="data\C_CustomFieldData.cs" />
+    <Compile Include="data\C_CustomFieldDefinition.cs" />
+    <Compile Include="data\C_CustomFieldHistory.cs" />
+    <Compile Include="data\C_DropDownItem.cs" />
+    <Compile Include="data\C_DropDownItemDetail.cs" />
+    <Compile Include="data\C_Employee.cs" />
+    <Compile Include="data\C_EmployeeBank.cs" />
+    <Compile Include="data\C_EmployeeBranchAsset.cs" />
+    <Compile Include="data\C_EmployeeCC.cs" />
+    <Compile Include="data\C_EmployeeCostCenter.cs" />
+    <Compile Include="data\C_EmployeeDependent.cs" />
+    <Compile Include="data\C_EmployeeDocument.cs" />
+    <Compile Include="data\C_EmployeeEducation.cs" />
+    <Compile Include="data\C_EmployeeEmergeClaim.cs" />
+    <Compile Include="data\C_EmployeeEmergeLeave.cs" />
+    <Compile Include="data\C_EmployeeEmergeRO.cs" />
+    <Compile Include="data\C_EmployeeExperience.cs" />
+    <Compile Include="data\C_EmployeeExpertise.cs" />
+    <Compile Include="data\C_EmployeeLanguage.cs" />
+    <Compile Include="data\C_EmployeeOrganization.cs" />
+    <Compile Include="data\C_EmployeeReference.cs" />
+    <Compile Include="data\C_EmployeeRelative.cs" />
+    <Compile Include="data\C_EmployeeTraining.cs" />
+    <Compile Include="data\C_Grade.cs" />
+    <Compile Include="data\C_GroupData.cs" />
+    <Compile Include="data\C_Holiday.cs" />
+    <Compile Include="data\C_JamSosTek.cs" />
+    <Compile Include="data\C_Job.cs" />
+    <Compile Include="data\C_JobTitle.cs" />
+    <Compile Include="data\C_Leave.cs" />
+    <Compile Include="data\C_LeaveDetail.cs" />
+    <Compile Include="data\C_LNDTopic.cs" />
+    <Compile Include="data\C_LNDTopicGroup.cs" />
+    <Compile Include="data\C_MinimumWageRegional.cs" />
+    <Compile Include="data\C_MinimumWageRegionalDetail.cs" />
+    <Compile Include="data\C_NomorReport1721A1.cs" />
+    <Compile Include="data\C_NPPJamsostek.cs" />
+    <Compile Include="data\C_Organization.cs" />
+    <Compile Include="data\C_OrganizationYear.cs" />
+    <Compile Include="data\C_OutputFile.cs" />
+    <Compile Include="data\C_OutputFileDetail.cs" />
+    <Compile Include="data\C_OverTime.cs" />
+    <Compile Include="data\C_OverTimeDetail.cs" />
+    <Compile Include="data\C_OverTimeGroupOverTime.cs" />
+    <Compile Include="data\C_OverTimeGroupTag.cs" />
+    <Compile Include="data\C_PaymentSchedule.cs" />
+    <Compile Include="data\C_PaySlipField.cs" />
+    <Compile Include="data\C_PaySlipFieldDetail.cs" />
+    <Compile Include="data\C_PaySlipFieldDetailComponent.cs" />
+    <Compile Include="data\C_PPH21.cs" />
+    <Compile Include="data\C_Provider.cs" />
+    <Compile Include="data\C_ReplacementDO.cs" />
+    <Compile Include="data\C_ReplacementDODetail.cs" />
+    <Compile Include="data\C_Report.cs" />
+    <Compile Include="data\C_ReportTemplate.cs" />
+    <Compile Include="data\C_ResignationMatrix.cs" />
+    <Compile Include="data\C_ResignationType.cs" />
+    <Compile Include="data\C_ROGroupTag.cs" />
+    <Compile Include="data\C_Roster.cs" />
+    <Compile Include="data\C_RosterOverTimeDetail.cs" />
+    <Compile Include="data\C_RosterRODetail.cs" />
+    <Compile Include="data\C_RoundingOvertime.cs" />
+    <Compile Include="data\C_RoundingReplacementDO.cs" />
+    <Compile Include="data\C_SalaryComponent.cs" />
+    <Compile Include="data\C_SalaryComponentAttendanceCode.cs" />
+    <Compile Include="data\C_SalaryComponentDetail.cs" />
+    <Compile Include="data\C_SalaryComponentEmployee.cs" />
+    <Compile Include="data\C_SalaryComponentLengthOfService.cs" />
+    <Compile Include="data\C_SalaryComponentTag.cs" />
+    <Compile Include="data\C_SettingMandatoryField.cs" />
+    <Compile Include="data\C_Severance.cs" />
+    <Compile Include="data\C_SeveranceMeritPay.cs" />
+    <Compile Include="data\C_SPTMasa.cs" />
+    <Compile Include="data\C_SPTMasaDetail.cs" />
+    <Compile Include="data\C_SystemInfo.cs" />
+    <Compile Include="data\C_SystemPolling.cs" />
+    <Compile Include="data\C_SystemStatus.cs" />
+    <Compile Include="data\C_Tag.cs" />
+    <Compile Include="data\C_Tax.cs" />
+    <Compile Include="data\C_User.cs" />
+    <Compile Include="data\C_UserDetail.cs" />
+    <Compile Include="data\C_UserGroup.cs" />
+    <Compile Include="data\C_UserProfile.cs" />
+    <Compile Include="data\C_UserProfileCustomFind.cs" />
+    <Compile Include="data\C_UserProfileDetail.cs" />
+    <Compile Include="data\C_UserProfileFind.cs" />
+    <Compile Include="data\C_Version.cs" />
+    <Compile Include="data\C_WorkGroup.cs" />
+    <Compile Include="data\C_WorkingPattern.cs" />
+    <Compile Include="data\C_WorkingPatternDetail.cs" />
+    <Compile Include="data\C_WorkingShift.cs" />
+    <Compile Include="data\C__Employee.cs" />
+    <Compile Include="data\C__EmployeeEmergeLeave.cs" />
+    <Compile Include="data\C__EmployeeSalaryComponent.cs" />
+    <Compile Include="data\C__Roster.cs" />
+    <Compile Include="data\C__SalaryComponent.cs" />
+    <Compile Include="data\C__SalaryEmployeePayment.cs" />
+    <Compile Include="data\C__UserPassword.cs" />
+    <Compile Include="data\EmployeeTransaction.cs" />
+    <Compile Include="data\EmployeeTransfer.cs" />
+    <Compile Include="data\EmployeeTransferDetail.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="data\LeaveAdjustment.cs" />
+    <Compile Include="data\LeaveCompensation.cs" />
+    <Compile Include="data\LeaveCompensationDetail.cs" />
+    <Compile Include="data\LeaveExtension.cs" />
+    <Compile Include="data\LeaveExtensionDetail.cs" />
+    <Compile Include="data\LeaveRequest.cs" />
+    <Compile Include="data\LND.cs" />
+    <Compile Include="data\LNDActionPlan.cs" />
+    <Compile Include="data\LNDAspectAction.cs" />
+    <Compile Include="data\LNDAspectTopic.cs" />
+    <Compile Include="data\LNDCoach.cs" />
+    <Compile Include="data\LNDLastTopic.cs" />
+    <Compile Include="data\LNDObjective.cs" />
+    <Compile Include="data\LNDPlanning.cs" />
+    <Compile Include="data\LNDPlanningDetail.cs" />
+    <Compile Include="data\LNDPreparation.cs" />
+    <Compile Include="data\LNDReview.cs" />
+    <Compile Include="data\Loan.cs" />
+    <Compile Include="data\LoanDetail.cs" />
+    <Compile Include="data\MaintenanceLog.cs" />
+    <Compile Include="data\Model1.cs" />
+    <Compile Include="data\News.cs" />
+    <Compile Include="data\NotaDina.cs" />
+    <Compile Include="data\NotaDinasCC.cs" />
+    <Compile Include="data\NotaDinasDocument.cs" />
+    <Compile Include="data\NotaDinasEmployee.cs" />
+    <Compile Include="data\NotaDinasEmployeeDate.cs" />
+    <Compile Include="data\OvertimeRequest.cs" />
+    <Compile Include="data\Payment.cs" />
+    <Compile Include="data\PensionFund.cs" />
+    <Compile Include="data\PensionFundDetail.cs" />
+    <Compile Include="Perhitungan.cs" />
+    <Compile Include="data\PermitRequest.cs" />
+    <Compile Include="data\ProcessQueue.cs" />
+    <Compile Include="data\ProcessQueueDetail.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="data\Resignation.cs" />
+    <Compile Include="data\ResignationBranchAsset.cs" />
+    <Compile Include="data\ResignationDetail.cs" />
+    <Compile Include="data\ResourcesCenter.cs" />
+    <Compile Include="data\RollBackTransaction.cs" />
+    <Compile Include="data\RORequest.cs" />
+    <Compile Include="data\SalaryAdjustment.cs" />
+    <Compile Include="data\SalaryAdjustmentDetail.cs" />
+    <Compile Include="data\SalaryAdjustmentGlobal.cs" />
+    <Compile Include="data\SalaryAdjustmentGlobalDetail.cs" />
+    <Compile Include="data\SalaryEmployee.cs" />
+    <Compile Include="data\SalaryEmployeeCustom.cs" />
+    <Compile Include="data\SalaryEmployeePayment.cs" />
+    <Compile Include="data\SalaryReductionUnReduction.cs" />
+    <Compile Include="data\StatusAlteration.cs" />
+    <Compile Include="data\TaxStatusAlteration.cs" />
+    <Compile Include="data\TaxStatusAlterationDetail.cs" />
+    <Compile Include="data\Training.cs" />
+    <Compile Include="data\TrainingAnswer.cs" />
+    <Compile Include="data\TrainingDetail.cs" />
+    <Compile Include="data\TrainingQuestion.cs" />
+    <Compile Include="data\UserActivity.cs" />
+    <Compile Include="data\Warning.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
