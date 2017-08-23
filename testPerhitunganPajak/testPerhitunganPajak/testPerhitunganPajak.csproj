@@ -69,239 +69,649 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="data\AppraisalRequest.cs" />
-    <Compile Include="data\AppraisalRequestComment.cs" />
-    <Compile Include="data\AppraisalRequestCompetencyCore.cs" />
-    <Compile Include="data\AppraisalRequestKPI.cs" />
-    <Compile Include="data\AttendanceMachine.cs" />
-    <Compile Include="data\Award.cs" />
-    <Compile Include="data\ClaimAdjustment.cs" />
-    <Compile Include="data\ClaimExtension.cs" />
-    <Compile Include="data\ClaimExtensionDetail.cs" />
-    <Compile Include="data\ClaimRequest.cs" />
-    <Compile Include="data\ClaimRequestDetail.cs" />
-    <Compile Include="data\C_AccountJournal.cs" />
-    <Compile Include="data\C_AccountJournalCostCenter.cs" />
-    <Compile Include="data\C_AccountJournalDetail.cs" />
-    <Compile Include="data\C_AccountJournalOrganization.cs" />
-    <Compile Include="data\C_AttachmentImage.cs" />
-    <Compile Include="data\C_AttendanceCode.cs" />
-    <Compile Include="data\C_AttendanceType.cs" />
-    <Compile Include="data\C_AutoNumber.cs" />
-    <Compile Include="data\C_AutoNumberDetail.cs" />
-    <Compile Include="data\C_AutoNumberPool.cs" />
-    <Compile Include="data\C_AutoNumberPoolDetail.cs" />
-    <Compile Include="data\C_BaseRate.cs" />
-    <Compile Include="data\C_BaseRateAttendanceCode.cs" />
-    <Compile Include="data\C_BaseRateDetail.cs" />
-    <Compile Include="data\C_BaseRateGroupType.cs" />
-    <Compile Include="data\C_BaseRateTag.cs" />
-    <Compile Include="data\C_BaseRateTag2.cs" />
-    <Compile Include="data\C_BlackListIdNumber.cs" />
-    <Compile Include="data\C_Branch.cs" />
-    <Compile Include="data\C_BranchAsset.cs" />
-    <Compile Include="data\C_Break.cs" />
-    <Compile Include="data\C_BreakDetail.cs" />
-    <Compile Include="data\C_Calendar.cs" />
-    <Compile Include="data\C_CalendarDetail.cs" />
-    <Compile Include="data\C_CashTransferField.cs" />
-    <Compile Include="data\C_CashTransferFieldDetail.cs" />
-    <Compile Include="data\C_Claim.cs" />
-    <Compile Include="data\C_ClaimDetail.cs" />
-    <Compile Include="data\C_Class.cs" />
-    <Compile Include="data\C_Company.cs" />
-    <Compile Include="data\C_Competency.cs" />
-    <Compile Include="data\C_CompetencyAppraisal.cs" />
-    <Compile Include="data\C_CompetencyBranch.cs" />
-    <Compile Include="data\C_CompetencyCore.cs" />
-    <Compile Include="data\C_CompetencyCoreAppraisal.cs" />
-    <Compile Include="data\C_CompetencyCoreGrade.cs" />
-    <Compile Include="data\C_CompetencyCoreKeyAction.cs" />
-    <Compile Include="data\C_CompetencyCoreScale.cs" />
-    <Compile Include="data\C_CompetencyFinalResult.cs" />
-    <Compile Include="data\C_CompetencyGrade.cs" />
-    <Compile Include="data\C_CompetencyJob.cs" />
-    <Compile Include="data\C_CompetencyJobResult.cs" />
-    <Compile Include="data\C_CompetencyKPI.cs" />
-    <Compile Include="data\C_CompetencyKPIResult.cs" />
-    <Compile Include="data\C_CostNotaDinas.cs" />
-    <Compile Include="data\C_CostNotaDinasActivity.cs" />
-    <Compile Include="data\C_CostNotaDinasActivityDetail.cs" />
-    <Compile Include="data\C_CostNotaDinasDetail.cs" />
-    <Compile Include="data\C_CostNotaDinasDetailJobTitle.cs" />
-    <Compile Include="data\C_CostNotaDinasDetailTypeSchedule.cs" />
-    <Compile Include="data\C_CostNotaDinasDetailTypeTransport.cs" />
-    <Compile Include="data\C_CostNotaDinasMatrix.cs" />
-    <Compile Include="data\C_CostNotaDinasMatrixDetail.cs" />
-    <Compile Include="data\C_CurrencyRate.cs" />
-    <Compile Include="data\C_CustomField.cs" />
-    <Compile Include="data\C_CustomFieldData.cs" />
-    <Compile Include="data\C_CustomFieldDefinition.cs" />
-    <Compile Include="data\C_CustomFieldHistory.cs" />
-    <Compile Include="data\C_DropDownItem.cs" />
-    <Compile Include="data\C_DropDownItemDetail.cs" />
-    <Compile Include="data\C_Employee.cs" />
-    <Compile Include="data\C_EmployeeBank.cs" />
-    <Compile Include="data\C_EmployeeBranchAsset.cs" />
-    <Compile Include="data\C_EmployeeCC.cs" />
-    <Compile Include="data\C_EmployeeCostCenter.cs" />
-    <Compile Include="data\C_EmployeeDependent.cs" />
-    <Compile Include="data\C_EmployeeDocument.cs" />
-    <Compile Include="data\C_EmployeeEducation.cs" />
-    <Compile Include="data\C_EmployeeEmergeClaim.cs" />
-    <Compile Include="data\C_EmployeeEmergeLeave.cs" />
-    <Compile Include="data\C_EmployeeEmergeRO.cs" />
-    <Compile Include="data\C_EmployeeExperience.cs" />
-    <Compile Include="data\C_EmployeeExpertise.cs" />
-    <Compile Include="data\C_EmployeeLanguage.cs" />
-    <Compile Include="data\C_EmployeeOrganization.cs" />
-    <Compile Include="data\C_EmployeeReference.cs" />
-    <Compile Include="data\C_EmployeeRelative.cs" />
-    <Compile Include="data\C_EmployeeTraining.cs" />
-    <Compile Include="data\C_Grade.cs" />
-    <Compile Include="data\C_GroupData.cs" />
-    <Compile Include="data\C_Holiday.cs" />
-    <Compile Include="data\C_JamSosTek.cs" />
-    <Compile Include="data\C_Job.cs" />
-    <Compile Include="data\C_JobTitle.cs" />
-    <Compile Include="data\C_Leave.cs" />
-    <Compile Include="data\C_LeaveDetail.cs" />
-    <Compile Include="data\C_LNDTopic.cs" />
-    <Compile Include="data\C_LNDTopicGroup.cs" />
-    <Compile Include="data\C_MinimumWageRegional.cs" />
-    <Compile Include="data\C_MinimumWageRegionalDetail.cs" />
-    <Compile Include="data\C_NomorReport1721A1.cs" />
-    <Compile Include="data\C_NPPJamsostek.cs" />
-    <Compile Include="data\C_Organization.cs" />
-    <Compile Include="data\C_OrganizationYear.cs" />
-    <Compile Include="data\C_OutputFile.cs" />
-    <Compile Include="data\C_OutputFileDetail.cs" />
-    <Compile Include="data\C_OverTime.cs" />
-    <Compile Include="data\C_OverTimeDetail.cs" />
-    <Compile Include="data\C_OverTimeGroupOverTime.cs" />
-    <Compile Include="data\C_OverTimeGroupTag.cs" />
-    <Compile Include="data\C_PaymentSchedule.cs" />
-    <Compile Include="data\C_PaySlipField.cs" />
-    <Compile Include="data\C_PaySlipFieldDetail.cs" />
-    <Compile Include="data\C_PaySlipFieldDetailComponent.cs" />
-    <Compile Include="data\C_PPH21.cs" />
-    <Compile Include="data\C_Provider.cs" />
-    <Compile Include="data\C_ReplacementDO.cs" />
-    <Compile Include="data\C_ReplacementDODetail.cs" />
-    <Compile Include="data\C_Report.cs" />
-    <Compile Include="data\C_ReportTemplate.cs" />
-    <Compile Include="data\C_ResignationMatrix.cs" />
-    <Compile Include="data\C_ResignationType.cs" />
-    <Compile Include="data\C_ROGroupTag.cs" />
-    <Compile Include="data\C_Roster.cs" />
-    <Compile Include="data\C_RosterOverTimeDetail.cs" />
-    <Compile Include="data\C_RosterRODetail.cs" />
-    <Compile Include="data\C_RoundingOvertime.cs" />
-    <Compile Include="data\C_RoundingReplacementDO.cs" />
-    <Compile Include="data\C_SalaryComponent.cs" />
-    <Compile Include="data\C_SalaryComponentAttendanceCode.cs" />
-    <Compile Include="data\C_SalaryComponentDetail.cs" />
-    <Compile Include="data\C_SalaryComponentEmployee.cs" />
-    <Compile Include="data\C_SalaryComponentLengthOfService.cs" />
-    <Compile Include="data\C_SalaryComponentTag.cs" />
-    <Compile Include="data\C_SettingMandatoryField.cs" />
-    <Compile Include="data\C_Severance.cs" />
-    <Compile Include="data\C_SeveranceMeritPay.cs" />
-    <Compile Include="data\C_SPTMasa.cs" />
-    <Compile Include="data\C_SPTMasaDetail.cs" />
-    <Compile Include="data\C_SystemInfo.cs" />
-    <Compile Include="data\C_SystemPolling.cs" />
-    <Compile Include="data\C_SystemStatus.cs" />
-    <Compile Include="data\C_Tag.cs" />
-    <Compile Include="data\C_Tax.cs" />
-    <Compile Include="data\C_User.cs" />
-    <Compile Include="data\C_UserDetail.cs" />
-    <Compile Include="data\C_UserGroup.cs" />
-    <Compile Include="data\C_UserProfile.cs" />
-    <Compile Include="data\C_UserProfileCustomFind.cs" />
-    <Compile Include="data\C_UserProfileDetail.cs" />
-    <Compile Include="data\C_UserProfileFind.cs" />
-    <Compile Include="data\C_Version.cs" />
-    <Compile Include="data\C_WorkGroup.cs" />
-    <Compile Include="data\C_WorkingPattern.cs" />
-    <Compile Include="data\C_WorkingPatternDetail.cs" />
-    <Compile Include="data\C_WorkingShift.cs" />
-    <Compile Include="data\C__Employee.cs" />
-    <Compile Include="data\C__EmployeeEmergeLeave.cs" />
-    <Compile Include="data\C__EmployeeSalaryComponent.cs" />
-    <Compile Include="data\C__Roster.cs" />
-    <Compile Include="data\C__SalaryComponent.cs" />
-    <Compile Include="data\C__SalaryEmployeePayment.cs" />
-    <Compile Include="data\C__UserPassword.cs" />
-    <Compile Include="data\EmployeeTransaction.cs" />
-    <Compile Include="data\EmployeeTransfer.cs" />
-    <Compile Include="data\EmployeeTransferDetail.cs" />
+    <Compile Include="DataAccess.cs" />
+    <Compile Include="DataAccessLayer\AppraisalRequest.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\AppraisalRequestComment.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\AppraisalRequestCompetencyCore.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\AppraisalRequestKPI.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\AttendanceMachine.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\Award.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\ClaimAdjustment.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\ClaimExtension.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\ClaimExtensionDetail.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\ClaimRequest.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\ClaimRequestDetail.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_AccountJournal.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_AccountJournalDetail.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_AccountJournalOrganization.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_AttachmentImage.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_AttendanceCode.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_AttendanceType.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_AutoNumber.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_AutoNumberDetail.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_AutoNumberPool.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_AutoNumberPoolDetail.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_BaseRate.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_BaseRateAttendanceCode.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_BaseRateDetail.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_BaseRateGroupType.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_BaseRateTag.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_BaseRateTag2.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_Branch.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_BranchAsset.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_Break.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_BreakDetail.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_Calendar.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_CalendarDetail.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_CashTransferField.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_CashTransferFieldDetail.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_Claim.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_ClaimDetail.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_Class.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_Company.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_Competency.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_CompetencyAppraisal.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_CompetencyBranch.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_CompetencyCore.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_CompetencyCoreAppraisal.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_CompetencyCoreGrade.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_CompetencyCoreKeyAction.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_CompetencyCoreScale.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_CompetencyFinalResult.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_CompetencyGrade.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_CompetencyJob.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_CompetencyJobResult.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_CompetencyKPI.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_CompetencyKPIResult.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_CostNotaDinas.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_CostNotaDinasActivity.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_CostNotaDinasActivityDetail.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_CostNotaDinasDetail.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_CostNotaDinasDetailJobTitle.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_CostNotaDinasDetailTypeSchedule.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_CostNotaDinasDetailTypeTransport.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_CostNotaDinasMatrix.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_CostNotaDinasMatrixDetail.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_CurrencyRate.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_CustomField.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_CustomFieldData.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_CustomFieldDefinition.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_DropDownItem.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_DropDownItemDetail.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_Employee.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_EmployeeBank.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_EmployeeBranchAsset.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_EmployeeCC.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_EmployeeCostCenter.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_EmployeeDependent.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_EmployeeDocument.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_EmployeeEducation.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_EmployeeEmergeClaim.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_EmployeeEmergeLeave.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_EmployeeExperience.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_EmployeeExpertise.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_EmployeeLanguage.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_EmployeeOrganization.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_EmployeeReference.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_EmployeeRelative.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_EmployeeTraining.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_Grade.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_GroupData.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_Holiday.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_JamSosTek.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_Job.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_JobTitle.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_Leave.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_LeaveDetail.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_LNDTopic.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_LNDTopicGroup.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_MinimumWageRegional.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_MinimumWageRegionalDetail.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_NPPJamsostek.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_Organization.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_OrganizationYear.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_OutputFile.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_OutputFileDetail.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_OverTime.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_OverTimeDetail.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_OverTimeGroupOverTime.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_OverTimeGroupTag.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_PaymentSchedule.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_PaySlipField.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_PaySlipFieldDetail.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_PaySlipFieldDetailComponent.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_PPH21.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_Provider.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_Report.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_ReportTemplate.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_ResignationMatrix.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_ResignationType.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_Roster.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_RosterOverTimeDetail.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_RoundingOvertime.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_SalaryComponent.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_SalaryComponentAttendanceCode.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_SalaryComponentDetail.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_SalaryComponentEmployee.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_SalaryComponentLengthOfService.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_SalaryComponentTag.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_Severance.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_SeveranceMeritPay.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_SPTMasa.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_SPTMasaDetail.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_SystemInfo.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_SystemPolling.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_SystemStatus.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_Tag.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_Tax.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_User.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_UserDetail.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_UserGroup.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_UserProfileCustomFind.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_UserProfileFind.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_Version.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_WorkingPattern.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_WorkingPatternDetail.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_WorkingShift.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C__Employee.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C__EmployeeEmergeLeave.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C__EmployeeSalaryComponent.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C__Roster.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C__SalaryComponent.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C__UserPassword.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\EmployeeTransaction.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\EmployeeTransfer.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\EmployeeTransferDetail.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\LeaveAdjustment.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\LeaveCompensation.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\LeaveCompensationDetail.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\LeaveExtension.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\LeaveExtensionDetail.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\LeaveRequest.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\LND.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\LNDActionPlan.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\LNDAspectAction.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\LNDAspectTopic.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\LNDCoach.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\LNDLastTopic.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\LNDObjective.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\LNDPlanning.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\LNDPlanningDetail.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\LNDPreparation.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\LNDReview.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\Loan.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\LoanDetail.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\MaintenanceLog.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\News.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\NotaDina.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\NotaDinasCC.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\NotaDinasDocument.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\NotaDinasEmployee.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\NotaDinasEmployeeDate.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\OvertimeRequest.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\Payment.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\PensionFund.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\PensionFundDetail.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\PermitRequest.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\ProcessQueue.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\ProcessQueueDetail.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\Resignation.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\ResignationBranchAsset.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\ResourcesCenter.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\RollBackTransaction.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\SalaryAdjustment.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\SalaryAdjustmentDetail.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\SalaryAdjustmentGlobal.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\SalaryAdjustmentGlobalDetail.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\SalaryEmployee.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\SalaryEmployeeCustom.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\SalaryEmployeePayment.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\SalaryReductionUnReduction.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\StatusAlteration.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\TaxStatusAlteration.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\TaxStatusAlterationDetail.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\Training.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\TrainingAnswer.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\TrainingDetail.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\TrainingQuestion.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\UserActivity.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\Warning.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="data\LeaveAdjustment.cs" />
-    <Compile Include="data\LeaveCompensation.cs" />
-    <Compile Include="data\LeaveCompensationDetail.cs" />
-    <Compile Include="data\LeaveExtension.cs" />
-    <Compile Include="data\LeaveExtensionDetail.cs" />
-    <Compile Include="data\LeaveRequest.cs" />
-    <Compile Include="data\LND.cs" />
-    <Compile Include="data\LNDActionPlan.cs" />
-    <Compile Include="data\LNDAspectAction.cs" />
-    <Compile Include="data\LNDAspectTopic.cs" />
-    <Compile Include="data\LNDCoach.cs" />
-    <Compile Include="data\LNDLastTopic.cs" />
-    <Compile Include="data\LNDObjective.cs" />
-    <Compile Include="data\LNDPlanning.cs" />
-    <Compile Include="data\LNDPlanningDetail.cs" />
-    <Compile Include="data\LNDPreparation.cs" />
-    <Compile Include="data\LNDReview.cs" />
-    <Compile Include="data\Loan.cs" />
-    <Compile Include="data\LoanDetail.cs" />
-    <Compile Include="data\MaintenanceLog.cs" />
-    <Compile Include="data\Model1.cs" />
-    <Compile Include="data\News.cs" />
-    <Compile Include="data\NotaDina.cs" />
-    <Compile Include="data\NotaDinasCC.cs" />
-    <Compile Include="data\NotaDinasDocument.cs" />
-    <Compile Include="data\NotaDinasEmployee.cs" />
-    <Compile Include="data\NotaDinasEmployeeDate.cs" />
-    <Compile Include="data\OvertimeRequest.cs" />
-    <Compile Include="data\Payment.cs" />
-    <Compile Include="data\PensionFund.cs" />
-    <Compile Include="data\PensionFundDetail.cs" />
     <Compile Include="Perhitungan.cs" />
-    <Compile Include="data\PermitRequest.cs" />
-    <Compile Include="data\ProcessQueue.cs" />
-    <Compile Include="data\ProcessQueueDetail.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="data\Resignation.cs" />
-    <Compile Include="data\ResignationBranchAsset.cs" />
-    <Compile Include="data\ResignationDetail.cs" />
-    <Compile Include="data\ResourcesCenter.cs" />
-    <Compile Include="data\RollBackTransaction.cs" />
-    <Compile Include="data\RORequest.cs" />
-    <Compile Include="data\SalaryAdjustment.cs" />
-    <Compile Include="data\SalaryAdjustmentDetail.cs" />
-    <Compile Include="data\SalaryAdjustmentGlobal.cs" />
-    <Compile Include="data\SalaryAdjustmentGlobalDetail.cs" />
-    <Compile Include="data\SalaryEmployee.cs" />
-    <Compile Include="data\SalaryEmployeeCustom.cs" />
-    <Compile Include="data\SalaryEmployeePayment.cs" />
-    <Compile Include="data\SalaryReductionUnReduction.cs" />
-    <Compile Include="data\StatusAlteration.cs" />
-    <Compile Include="data\TaxStatusAlteration.cs" />
-    <Compile Include="data\TaxStatusAlterationDetail.cs" />
-    <Compile Include="data\Training.cs" />
-    <Compile Include="data\TrainingAnswer.cs" />
-    <Compile Include="data\TrainingDetail.cs" />
-    <Compile Include="data\TrainingQuestion.cs" />
-    <Compile Include="data\UserActivity.cs" />
-    <Compile Include="data\Warning.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -314,6 +724,14 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EntityDeploy Include="DataAccessLayer\Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="App.Config" />
+    <None Include="DataAccessLayer\Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -326,9 +744,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
       <Visible>False</Visible>
       <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
@@ -339,6 +754,22 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="DataAccessLayer\Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DataAccessLayer\Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
