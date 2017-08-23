@@ -13,10 +13,10 @@ namespace testPerhitunganPajak.DataAccessLayer
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class testLotteEntities : DbContext
+    public partial class APMDatabaseEntities : DbContext
     {
-        public testLotteEntities()
-            : base("name=testLotteEntities")
+        public APMDatabaseEntities()
+            : base("name=APMDatabaseEntities")
         {
         }
     
@@ -30,8 +30,10 @@ namespace testPerhitunganPajak.DataAccessLayer
         public virtual DbSet<C__EmployeeSalaryComponent> C__EmployeeSalaryComponent { get; set; }
         public virtual DbSet<C__Roster> C__Roster { get; set; }
         public virtual DbSet<C__SalaryComponent> C__SalaryComponent { get; set; }
+        public virtual DbSet<C__SalaryEmployeePayment> C__SalaryEmployeePayment { get; set; }
         public virtual DbSet<C__UserPassword> C__UserPassword { get; set; }
         public virtual DbSet<C_AccountJournal> C_AccountJournal { get; set; }
+        public virtual DbSet<C_AccountJournalCostCenter> C_AccountJournalCostCenter { get; set; }
         public virtual DbSet<C_AccountJournalDetail> C_AccountJournalDetail { get; set; }
         public virtual DbSet<C_AccountJournalOrganization> C_AccountJournalOrganization { get; set; }
         public virtual DbSet<C_AttachmentImage> C_AttachmentImage { get; set; }
@@ -43,6 +45,7 @@ namespace testPerhitunganPajak.DataAccessLayer
         public virtual DbSet<C_BaseRateGroupType> C_BaseRateGroupType { get; set; }
         public virtual DbSet<C_BaseRateTag> C_BaseRateTag { get; set; }
         public virtual DbSet<C_BaseRateTag2> C_BaseRateTag2 { get; set; }
+        public virtual DbSet<C_BlackListIdNumber> C_BlackListIdNumber { get; set; }
         public virtual DbSet<C_Branch> C_Branch { get; set; }
         public virtual DbSet<C_BranchAsset> C_BranchAsset { get; set; }
         public virtual DbSet<C_Break> C_Break { get; set; }
@@ -81,6 +84,7 @@ namespace testPerhitunganPajak.DataAccessLayer
         public virtual DbSet<C_CustomField> C_CustomField { get; set; }
         public virtual DbSet<C_CustomFieldData> C_CustomFieldData { get; set; }
         public virtual DbSet<C_CustomFieldDefinition> C_CustomFieldDefinition { get; set; }
+        public virtual DbSet<C_CustomFieldHistory> C_CustomFieldHistory { get; set; }
         public virtual DbSet<C_DropDownItem> C_DropDownItem { get; set; }
         public virtual DbSet<C_DropDownItemDetail> C_DropDownItemDetail { get; set; }
         public virtual DbSet<C_Employee> C_Employee { get; set; }
@@ -93,6 +97,7 @@ namespace testPerhitunganPajak.DataAccessLayer
         public virtual DbSet<C_EmployeeEducation> C_EmployeeEducation { get; set; }
         public virtual DbSet<C_EmployeeEmergeClaim> C_EmployeeEmergeClaim { get; set; }
         public virtual DbSet<C_EmployeeEmergeLeave> C_EmployeeEmergeLeave { get; set; }
+        public virtual DbSet<C_EmployeeEmergeRO> C_EmployeeEmergeRO { get; set; }
         public virtual DbSet<C_EmployeeExperience> C_EmployeeExperience { get; set; }
         public virtual DbSet<C_EmployeeExpertise> C_EmployeeExpertise { get; set; }
         public virtual DbSet<C_EmployeeLanguage> C_EmployeeLanguage { get; set; }
@@ -112,6 +117,7 @@ namespace testPerhitunganPajak.DataAccessLayer
         public virtual DbSet<C_LNDTopicGroup> C_LNDTopicGroup { get; set; }
         public virtual DbSet<C_MinimumWageRegional> C_MinimumWageRegional { get; set; }
         public virtual DbSet<C_MinimumWageRegionalDetail> C_MinimumWageRegionalDetail { get; set; }
+        public virtual DbSet<C_NomorReport1721A1> C_NomorReport1721A1 { get; set; }
         public virtual DbSet<C_NPPJamsostek> C_NPPJamsostek { get; set; }
         public virtual DbSet<C_Organization> C_Organization { get; set; }
         public virtual DbSet<C_OrganizationYear> C_OrganizationYear { get; set; }
@@ -126,17 +132,23 @@ namespace testPerhitunganPajak.DataAccessLayer
         public virtual DbSet<C_PaySlipFieldDetail> C_PaySlipFieldDetail { get; set; }
         public virtual DbSet<C_PaySlipFieldDetailComponent> C_PaySlipFieldDetailComponent { get; set; }
         public virtual DbSet<C_PPH21> C_PPH21 { get; set; }
+        public virtual DbSet<C_ReplacementDO> C_ReplacementDO { get; set; }
+        public virtual DbSet<C_ReplacementDODetail> C_ReplacementDODetail { get; set; }
         public virtual DbSet<C_Report> C_Report { get; set; }
         public virtual DbSet<C_ResignationType> C_ResignationType { get; set; }
+        public virtual DbSet<C_ROGroupTag> C_ROGroupTag { get; set; }
         public virtual DbSet<C_Roster> C_Roster { get; set; }
         public virtual DbSet<C_RosterOverTimeDetail> C_RosterOverTimeDetail { get; set; }
+        public virtual DbSet<C_RosterRODetail> C_RosterRODetail { get; set; }
         public virtual DbSet<C_RoundingOvertime> C_RoundingOvertime { get; set; }
+        public virtual DbSet<C_RoundingReplacementDO> C_RoundingReplacementDO { get; set; }
         public virtual DbSet<C_SalaryComponent> C_SalaryComponent { get; set; }
         public virtual DbSet<C_SalaryComponentAttendanceCode> C_SalaryComponentAttendanceCode { get; set; }
         public virtual DbSet<C_SalaryComponentDetail> C_SalaryComponentDetail { get; set; }
         public virtual DbSet<C_SalaryComponentEmployee> C_SalaryComponentEmployee { get; set; }
         public virtual DbSet<C_SalaryComponentLengthOfService> C_SalaryComponentLengthOfService { get; set; }
         public virtual DbSet<C_SalaryComponentTag> C_SalaryComponentTag { get; set; }
+        public virtual DbSet<C_SettingMandatoryField> C_SettingMandatoryField { get; set; }
         public virtual DbSet<C_Severance> C_Severance { get; set; }
         public virtual DbSet<C_SeveranceMeritPay> C_SeveranceMeritPay { get; set; }
         public virtual DbSet<C_SPTMasa> C_SPTMasa { get; set; }
@@ -148,8 +160,11 @@ namespace testPerhitunganPajak.DataAccessLayer
         public virtual DbSet<C_User> C_User { get; set; }
         public virtual DbSet<C_UserDetail> C_UserDetail { get; set; }
         public virtual DbSet<C_UserGroup> C_UserGroup { get; set; }
+        public virtual DbSet<C_UserProfile> C_UserProfile { get; set; }
+        public virtual DbSet<C_UserProfileDetail> C_UserProfileDetail { get; set; }
         public virtual DbSet<C_UserProfileFind> C_UserProfileFind { get; set; }
         public virtual DbSet<C_Version> C_Version { get; set; }
+        public virtual DbSet<C_WorkGroup> C_WorkGroup { get; set; }
         public virtual DbSet<C_WorkingPattern> C_WorkingPattern { get; set; }
         public virtual DbSet<C_WorkingPatternDetail> C_WorkingPatternDetail { get; set; }
         public virtual DbSet<C_WorkingShift> C_WorkingShift { get; set; }
@@ -199,7 +214,9 @@ namespace testPerhitunganPajak.DataAccessLayer
         public virtual DbSet<ProcessQueueDetail> ProcessQueueDetails { get; set; }
         public virtual DbSet<Resignation> Resignations { get; set; }
         public virtual DbSet<ResignationBranchAsset> ResignationBranchAssets { get; set; }
+        public virtual DbSet<ResignationDetail> ResignationDetails { get; set; }
         public virtual DbSet<RollBackTransaction> RollBackTransactions { get; set; }
+        public virtual DbSet<RORequest> RORequests { get; set; }
         public virtual DbSet<SalaryAdjustment> SalaryAdjustments { get; set; }
         public virtual DbSet<SalaryAdjustmentDetail> SalaryAdjustmentDetails { get; set; }
         public virtual DbSet<SalaryAdjustmentGlobal> SalaryAdjustmentGlobals { get; set; }

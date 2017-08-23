@@ -111,5 +111,18 @@ namespace testPerhitunganPajak.DataAccessLayer
         public Nullable<bool> UseCostCenter { get; set; }
         public Nullable<System.Guid> LockingGuid { get; set; }
         public Nullable<int> StartNewDayOn { get; set; }
+        public Nullable<int> BeforeDutyOn { get; set; }
+        public Nullable<int> AfterDutyOn { get; set; }
+        public Nullable<int> BeforeDutyOff { get; set; }
+        public Nullable<int> AfterDutyOff { get; set; }
+        public string DayOffDutyOn { get; set; }
+        public string DayOffDutyOff { get; set; }
+        public Nullable<bool> SplitPosition { get; set; }
+        public Nullable<System.DateTime> SplitPositionDate { get; set; }
+        public Nullable<bool> ReplacementDO { get; set; }
+        public Nullable<int> ROExpiredBy { get; set; }
+        public Nullable<int> ROTotalDays { get; set; }
+        public Nullable<int> DayWorkingHourRO { get; set; }
+        public Nullable<bool> UseProfile { get; set; }
     }
 }

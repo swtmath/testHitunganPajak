@@ -80,6 +80,7 @@ namespace testPerhitunganPajak.DataAccessLayer
         public Nullable<System.Guid> ModifiedBy { get; set; }
         public Nullable<System.DateTime> ModifiedDate { get; set; }
         public Nullable<System.Guid> DutyBreakId { get; set; }
+        public Nullable<bool> ReplacementDO { get; set; }
     
         public virtual C_Tag C_Tag { get; set; }
     }

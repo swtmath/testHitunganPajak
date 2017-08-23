@@ -74,5 +74,6 @@ namespace testPerhitunganPajak.DataAccessLayer
         public string DateOff { get; set; }
         public Nullable<bool> PrioritizeOnOffFlag { get; set; }
         public string Sheet { get; set; }
+        public Nullable<bool> FlagAutomatic { get; set; }
     }
 }

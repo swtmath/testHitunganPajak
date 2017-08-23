@@ -51,6 +51,29 @@ namespace testPerhitunganPajak.DataAccessLayer
         public Nullable<System.DateTime> ProbationDate { get; set; }
         public Nullable<System.DateTime> EndProbationDate { get; set; }
         public Nullable<int> SalaryExpired { get; set; }
+        public Nullable<System.Guid> BranchHRId { get; set; }
+        public Nullable<System.Guid> JobHRId { get; set; }
+        public Nullable<System.Guid> OrganizationHRId { get; set; }
+        public Nullable<bool> fJamSosTek { get; set; }
+        public string JamSosTekNo { get; set; }
+        public Nullable<System.DateTime> JamsostekDate { get; set; }
+        public Nullable<System.Guid> NPPJamsostekId { get; set; }
+        public Nullable<int> JKK { get; set; }
+        public Nullable<System.DateTime> JPDate { get; set; }
+        public Nullable<bool> fJP { get; set; }
+        public string BPJSNo { get; set; }
+        public Nullable<System.DateTime> BPJSDate { get; set; }
+        public Nullable<bool> fBPJS { get; set; }
+        public Nullable<int> BPJSFamily { get; set; }
+        public Nullable<bool> fPension { get; set; }
+        public string PensionNo { get; set; }
+        public Nullable<System.DateTime> PensionDate { get; set; }
+        public Nullable<bool> fJHT { get; set; }
+        public Nullable<bool> fJPK { get; set; }
+        public Nullable<System.DateTime> fJPKDate { get; set; }
+        public Nullable<bool> fPensionFund { get; set; }
+        public string PensionFundNo { get; set; }
+        public Nullable<System.DateTime> PensionFundDate { get; set; }
     
         public virtual C_Employee C_Employee { get; set; }
     }

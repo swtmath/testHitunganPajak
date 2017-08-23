@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="288c6e834d1649f09121422cd42a1998" Name="Diagram1">
+        <EntityTypeShape EntityType="APMDatabaseModel.C__Employee" Width="1.5" PointX="3" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C__EmployeeEmergeLeave" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C__EmployeeSalaryComponent" Width="1.5" PointX="2.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C__Roster" Width="1.5" PointX="29.75" PointY="37.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C__SalaryComponent" Width="1.5" PointX="15.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C__SalaryEmployeePayment" Width="1.5" PointX="20.75" PointY="38.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C__UserPassword" Width="1.5" PointX="37" PointY="37.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_AccountJournal" Width="1.5" PointX="39.75" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_AccountJournalCostCenter" Width="1.5" PointX="15.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_AccountJournalDetail" Width="1.5" PointX="42" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_AccountJournalOrganization" Width="1.5" PointX="17.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_AttachmentImage" Width="1.5" PointX="17.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_AttendanceCode" Width="1.5" PointX="15.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_AttendanceType" Width="1.5" PointX="17.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_BaseRate" Width="1.5" PointX="23" PointY="19.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_BaseRateAttendanceCode" Width="1.5" PointX="17.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_BaseRateDetail" Width="1.5" PointX="25.25" PointY="27.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_BaseRateGroupType" Width="1.5" PointX="19.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_BaseRateTag" Width="1.5" PointX="24.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_BaseRateTag2" Width="1.5" PointX="25.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_BlackListIdNumber" Width="1.5" PointX="25.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_Branch" Width="1.5" PointX="15.75" PointY="39.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_BranchAsset" Width="1.5" PointX="10.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_Break" Width="1.5" PointX="39.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_BreakDetail" Width="1.5" PointX="42" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_Calendar" Width="1.5" PointX="32.75" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_CalendarDetail" Width="1.5" PointX="35" PointY="15.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_CashTransferField" Width="1.5" PointX="27.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_CashTransferFieldDetail" Width="1.5" PointX="30.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_Claim" Width="1.5" PointX="37.75" PointY="29.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_ClaimDetail" Width="1.5" PointX="40" PointY="31.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_Class" Width="1.5" PointX="40" PointY="24" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_Competency" Width="1.5" PointX="10.75" PointY="16.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_CompetencyAppraisal" Width="1.5" PointX="13" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_CompetencyBranch" Width="1.5" PointX="13" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_CompetencyCore" Width="1.5" PointX="13" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_CompetencyCoreAppraisal" Width="1.5" PointX="18.25" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_CompetencyCoreGrade" Width="1.5" PointX="18.25" PointY="16.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_CompetencyCoreKeyAction" Width="1.5" PointX="15.25" PointY="14.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_CompetencyCoreScale" Width="1.5" PointX="15.25" PointY="17.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_CompetencyFinalResult" Width="1.5" PointX="13" PointY="17" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_CompetencyGrade" Width="1.5" PointX="13" PointY="20.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_CompetencyJob" Width="1.5" PointX="15.25" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_CompetencyJobResult" Width="1.5" PointX="13" PointY="23.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_CompetencyKPI" Width="1.5" PointX="13" PointY="26" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_CompetencyKPIResult" Width="1.5" PointX="13" PointY="29.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_CostNotaDinas" Width="1.5" PointX="24.75" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_CostNotaDinasActivity" Width="1.5" PointX="26.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_CostNotaDinasActivityDetail" Width="1.5" PointX="26.75" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_CostNotaDinasDetail" Width="1.5" PointX="26.75" PointY="33.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_CostNotaDinasDetailJobTitle" Width="1.5" PointX="39.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_CostNotaDinasDetailTypeSchedule" Width="1.5" PointX="17.75" PointY="39.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_CostNotaDinasDetailTypeTransport" Width="1.5" PointX="31.75" PointY="39.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_CostNotaDinasMatrix" Width="1.5" PointX="39.75" PointY="34.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_CostNotaDinasMatrixDetail" Width="1.5" PointX="39.75" PointY="37.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_CurrencyRate" Width="1.5" PointX="36.75" PointY="40.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_CustomField" Width="1.5" PointX="27" PointY="38.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_CustomFieldData" Width="1.5" PointX="17.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_CustomFieldDefinition" Width="1.5" PointX="24.75" PointY="38" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_CustomFieldHistory" Width="1.5" PointX="41.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_DropDownItem" Width="1.5" PointX="20.75" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_DropDownItemDetail" Width="1.5" PointX="23" PointY="15.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_Employee" Width="1.5" PointX="0.75" PointY="27.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_EmployeeBank" Width="1.5" PointX="26.75" PointY="41.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_EmployeeBranchAsset" Width="1.5" PointX="13" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_EmployeeCC" Width="1.5" PointX="41.75" PointY="34.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_EmployeeCostCenter" Width="1.5" PointX="3" PointY="26.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_EmployeeDependent" Width="1.5" PointX="3" PointY="29.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_EmployeeDocument" Width="1.5" PointX="41.75" PointY="37.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_EmployeeEducation" Width="1.5" PointX="3" PointY="36.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_EmployeeEmergeClaim" Width="1.5" PointX="38.75" PointY="41.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_EmployeeEmergeLeave" Width="1.5" PointX="41.75" PointY="40.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_EmployeeEmergeRO" Width="1.5" PointX="42.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_EmployeeExperience" Width="1.5" PointX="42.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_EmployeeExpertise" Width="1.5" PointX="3" PointY="40.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_EmployeeLanguage" Width="1.5" PointX="3" PointY="42.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_EmployeeOrganization" Width="1.5" PointX="3" PointY="46.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_EmployeeReference" Width="1.5" PointX="3" PointY="49.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_EmployeeRelative" Width="1.5" PointX="3" PointY="53" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_EmployeeTraining" Width="1.5" PointX="3" PointY="55.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_Grade" Width="1.5" PointX="37.75" PointY="24.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_GroupData" Width="1.5" PointX="17.75" PointY="42.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_Holiday" Width="1.5" PointX="30" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_JamSosTek" Width="1.5" PointX="42.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_Job" Width="1.5" PointX="20.75" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_JobTitle" Width="1.5" PointX="22.75" PointY="42.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_Leave" Width="1.5" PointX="32.75" PointY="22.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_LeaveDetail" Width="1.5" PointX="35" PointY="22.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_LNDTopic" Width="1.5" PointX="42.75" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_LNDTopicGroup" Width="1.5" PointX="31.75" PointY="42.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_MinimumWageRegional" Width="1.5" PointX="33.75" PointY="42.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_MinimumWageRegionalDetail" Width="1.5" PointX="8.75" PointY="43.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_NomorReport1721A1" Width="1.5" PointX="43.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_NPPJamsostek" Width="1.5" PointX="43.75" PointY="34.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_Organization" Width="1.5" PointX="20.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_OrganizationYear" Width="1.5" PointX="43.75" PointY="38.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_OutputFile" Width="1.5" PointX="37.75" PointY="19" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_OutputFileDetail" Width="1.5" PointX="40" PointY="19.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_OverTime" Width="1.5" PointX="30" PointY="14.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_OverTimeDetail" Width="1.5" PointX="32.25" PointY="14.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_OverTimeGroupOverTime" Width="1.5" PointX="43.75" PointY="41.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_OverTimeGroupTag" Width="1.5" PointX="44.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_PaymentSchedule" Width="1.5" PointX="17.75" PointY="25.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_PaySlipField" Width="1.5" PointX="44.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_PaySlipFieldDetail" Width="1.5" PointX="10.75" PointY="44.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_PaySlipFieldDetailComponent" Width="1.5" PointX="44.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_PPH21" Width="1.5" PointX="12.75" PointY="44.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_ReplacementDO" Width="1.5" PointX="30" PointY="18.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_ReplacementDODetail" Width="1.5" PointX="32.25" PointY="18.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_Report" Width="1.5" PointX="44.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_ResignationType" Width="1.5" PointX="3.75" PointY="64.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_ROGroupTag" Width="1.5" PointX="44.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_Roster" Width="1.5" PointX="30" PointY="22" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_RosterOverTimeDetail" Width="1.5" PointX="44.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_RosterRODetail" Width="1.5" PointX="44.75" PointY="29.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_RoundingOvertime" Width="1.5" PointX="35.75" PointY="44.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_RoundingReplacementDO" Width="1.5" PointX="43.75" PointY="44.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_SalaryComponent" Width="1.5" PointX="20" PointY="23" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_SalaryComponentAttendanceCode" Width="1.5" PointX="22.25" PointY="25" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_SalaryComponentDetail" Width="1.5" PointX="22.25" PointY="27.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_SalaryComponentEmployee" Width="1.5" PointX="22.25" PointY="30.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_SalaryComponentLengthOfService" Width="1.5" PointX="22.25" PointY="35.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_SalaryComponentTag" Width="1.5" PointX="45.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_SettingMandatoryField" Width="1.5" PointX="24.75" PointY="45.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_Severance" Width="1.5" PointX="26.75" PointY="45.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_SeveranceMeritPay" Width="1.5" PointX="45.75" PointY="34.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_SPTMasa" Width="1.5" PointX="37.75" PointY="14" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_SPTMasaDetail" Width="1.5" PointX="40" PointY="14.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_SystemInfo" Width="1.5" PointX="45.75" PointY="38.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_SystemPolling" Width="1.5" PointX="46.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_Tag" Width="1.5" PointX="27.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_Tax" Width="1.5" PointX="46.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_User" Width="1.5" PointX="34.75" PointY="36.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_UserDetail" Width="1.5" PointX="46.75" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_UserGroup" Width="1.5" PointX="46.75" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_UserProfile" Width="1.5" PointX="31.75" PointY="46.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_UserProfileDetail" Width="1.5" PointX="40.75" PointY="46.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_UserProfileFind" Width="1.5" PointX="47.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_Version" Width="1.5" PointX="8.75" PointY="47.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_WorkGroup" Width="1.5" PointX="17.75" PointY="47.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_WorkingPattern" Width="1.5" PointX="30.5" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_WorkingPatternDetail" Width="1.5" PointX="32.75" PointY="36.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_WorkingShift" Width="1.5" PointX="47.75" PointY="32.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.AppraisalRequest" Width="1.5" PointX="10.75" PointY="34.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.AppraisalRequestComment" Width="1.5" PointX="13" PointY="33.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.AppraisalRequestCompetencyCore" Width="1.5" PointX="13" PointY="36.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.AppraisalRequestKPI" Width="1.5" PointX="13" PointY="39.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.Award" Width="1.5" PointX="33.75" PointY="47.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.ClaimAdjustment" Width="1.5" PointX="35.75" PointY="47.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.ClaimExtension" Width="1.5" PointX="25.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.ClaimExtensionDetail" Width="1.5" PointX="28" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.ClaimRequest" Width="1.5" PointX="15.75" PointY="35" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.ClaimRequestDetail" Width="1.5" PointX="18" PointY="35.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.EmployeeTransaction" Width="1.5" PointX="37.75" PointY="47.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.EmployeeTransfer" Width="1.5" PointX="23" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.EmployeeTransferDetail" Width="1.5" PointX="47.75" PointY="39.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.LeaveAdjustment" Width="1.5" PointX="35" PointY="25.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.LeaveCompensation" Width="1.5" PointX="42.75" PointY="47.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.LeaveCompensationDetail" Width="1.5" PointX="47.75" PointY="43.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.LeaveExtension" Width="1.5" PointX="5.75" PointY="28" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.LeaveExtensionDetail" Width="1.5" PointX="8" PointY="28.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.LeaveRequest" Width="1.5" PointX="3" PointY="60.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.LND" Width="1.5" PointX="5.75" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.LNDActionPlan" Width="1.5" PointX="8" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.LNDAspectAction" Width="1.5" PointX="8" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.LNDAspectTopic" Width="1.5" PointX="8" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.LNDCoach" Width="1.5" PointX="8" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.LNDLastTopic" Width="1.5" PointX="8" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.LNDObjective" Width="1.5" PointX="8" PointY="17.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.LNDPlanning" Width="1.5" PointX="34.75" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.LNDPlanningDetail" Width="1.5" PointX="37" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.LNDPreparation" Width="1.5" PointX="8" PointY="20.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.LNDReview" Width="1.5" PointX="8" PointY="23.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.Loan" Width="1.5" PointX="34.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.LoanDetail" Width="1.5" PointX="37" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.NotaDina" Width="1.5" PointX="47.75" PointY="47.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.NotaDinasCC" Width="1.5" PointX="48.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.NotaDinasDocument" Width="1.5" PointX="48.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.NotaDinasEmployee" Width="1.5" PointX="10.75" PointY="48.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.NotaDinasEmployeeDate" Width="1.5" PointX="48.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.OvertimeRequest" Width="1.5" PointX="12.75" PointY="48.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.Payment" Width="1.5" PointX="48.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.PensionFund" Width="1.5" PointX="22.75" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.PensionFundDetail" Width="1.5" PointX="25" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.PermitRequest" Width="1.5" PointX="14.75" PointY="48.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.ProcessQueue" Width="1.5" PointX="32.75" PointY="31.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.ProcessQueueDetail" Width="1.5" PointX="35" PointY="32.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.Resignation" Width="1.5" PointX="6" PointY="33.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.ResignationBranchAsset" Width="1.5" PointX="48.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.ResignationDetail" Width="1.5" PointX="8.25" PointY="39.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.RollBackTransaction" Width="1.5" PointX="19.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.RORequest" Width="1.5" PointX="48.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.SalaryAdjustment" Width="1.5" PointX="22.75" PointY="48.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.SalaryAdjustmentDetail" Width="1.5" PointX="24.75" PointY="48.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.SalaryAdjustmentGlobal" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.SalaryAdjustmentGlobalDetail" Width="1.5" PointX="3" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.SalaryEmployee" Width="1.5" PointX="3" PointY="80.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.SalaryEmployeeCustom" Width="1.5" PointX="26.75" PointY="48.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.SalaryEmployeePayment" Width="1.5" PointX="49.75" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.SalaryReductionUnReduction" Width="1.5" PointX="39.75" PointY="49.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.StatusAlteration" Width="1.5" PointX="50.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.TaxStatusAlteration" Width="1.5" PointX="49.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.TaxStatusAlterationDetail" Width="1.5" PointX="5.75" PointY="50.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.Training" Width="1.5" PointX="7.75" PointY="50.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.TrainingAnswer" Width="1.5" PointX="50.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.TrainingDetail" Width="1.5" PointX="50.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.TrainingQuestion" Width="1.5" PointX="16.75" PointY="50.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.UserActivity" Width="1.5" PointX="50.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.Warning" Width="1.5" PointX="51.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_AutoNumber" Width="1.5" PointX="50.75" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_AutoNumberDetail" Width="1.5" PointX="12.75" PointY="51.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_AutoNumberPool" Width="1.5" PointX="51.75" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_AutoNumberPoolDetail" Width="1.5" PointX="28.75" PointY="51.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_Company" Width="1.5" PointX="51.75" PointY="29.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_Provider" Width="1.5" PointX="51.75" PointY="33.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_ReportTemplate" Width="1.5" PointX="51.75" PointY="37.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_ResignationMatrix" Width="1.5" PointX="51.75" PointY="41.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_SystemStatus" Width="1.5" PointX="41.75" PointY="51.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.C_UserProfileCustomFind" Width="1.5" PointX="51.75" PointY="45.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.AttendanceMachine" Width="1.5" PointX="51.75" PointY="48.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.MaintenanceLog" Width="1.5" PointX="52.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.News" Width="1.5" PointX="52.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APMDatabaseModel.ResourcesCenter" Width="1.5" PointX="52.75" PointY="14.75" IsExpanded="true" />
+        <AssociationConnector Association="APMDatabaseModel.FK___Employee__Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="APMDatabaseModel.FK___UserPassword__User" ManuallyRouted="false" />
+        <AssociationConnector Association="APMDatabaseModel.FK__AccountJournalDetail__AccountJournal" ManuallyRouted="false" />
+        <AssociationConnector Association="APMDatabaseModel.FK__BaseRateDetail__BaseRate" ManuallyRouted="false" />
+        <AssociationConnector Association="APMDatabaseModel.FK__BaseRateCalculationDetail__SalaryComponent" ManuallyRouted="false" />
+        <AssociationConnector Association="APMDatabaseModel.FK__EmployeeBranchAsset__BranchAsset" ManuallyRouted="false" />
+        <AssociationConnector Association="APMDatabaseModel.FK__BreakDetail__Break" ManuallyRouted="false" />
+        <AssociationConnector Association="APMDatabaseModel.FK__Calendar__WorkingPattern" ManuallyRouted="false" />
+        <AssociationConnector Association="APMDatabaseModel.FK__CalendarDetail__Calendar" ManuallyRouted="false" />
+        <AssociationConnector Association="APMDatabaseModel.FK__CalendarDetail__Tag" ManuallyRouted="false" />
+        <AssociationConnector Association="APMDatabaseModel.FK__ClaimDetail__Claim" ManuallyRouted="false" />
+        <AssociationConnector Association="APMDatabaseModel.FK__Class__Grade" ManuallyRouted="false" />
+        <AssociationConnector Association="APMDatabaseModel.FK__CompetencyAppraisal__Competency" ManuallyRouted="false" />
+        <AssociationConnector Association="APMDatabaseModel.FK__CompetencyBranch__Competency" ManuallyRouted="false" />
+        <AssociationConnector Association="APMDatabaseModel.FK__CompetencyCore__Competency" ManuallyRouted="false" />
+        <AssociationConnector Association="APMDatabaseModel.FK__CompetencyFinalResult__Competency" ManuallyRouted="false" />
+        <AssociationConnector Association="APMDatabaseModel.FK__CompetencyGrade__Competency" ManuallyRouted="false" />
+        <AssociationConnector Association="APMDatabaseModel.FK__CompetencyJobResult__Competency1" ManuallyRouted="false" />
+        <AssociationConnector Association="APMDatabaseModel.FK__CompetencyKPI__Competency" ManuallyRouted="false" />
+        <AssociationConnector Association="APMDatabaseModel.FK__CompetencyKPIResult__Competency" ManuallyRouted="false" />
+        <AssociationConnector Association="APMDatabaseModel.FK__CompetencyCoreAppraisal__CompetencyAppraisal" ManuallyRouted="false" />
+        <AssociationConnector Association="APMDatabaseModel.FK__CompetencyJob__CompetencyAppraisal" ManuallyRouted="false" />
+        <AssociationConnector Association="APMDatabaseModel.FK__CompetencyCodeKeyAction__CompetencyCore" ManuallyRouted="false" />
+        <AssociationConnector Association="APMDatabaseModel.FK__CompetencyCoreAppraisal__CompetencyCore" ManuallyRouted="false" />
+        <AssociationConnector Association="APMDatabaseModel.FK__CompetencyCoreGrade__CompetencyCore" ManuallyRouted="false" />
+        <AssociationConnector Association="APMDatabaseModel.FK__CompetencyCoreScale__CompetencyCore" ManuallyRouted="false" />
+        <AssociationConnector Association="APMDatabaseModel.FK__CompetencyCoreGrade__CompetencyGrade" ManuallyRouted="false" />
+        <AssociationConnector Association="APMDatabaseModel.FK__CustomField__CustomFieldDefinition" ManuallyRouted="false" />
+        <AssociationConnector Association="APMDatabaseModel.FK__DropDownItemDetail__DropDownItem" ManuallyRouted="false" />
+        <AssociationConnector Association="APMDatabaseModel.FK__EmployeeCostCenter__Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="APMDatabaseModel.FK__EmployeeDependent__Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="APMDatabaseModel.FK__EmployeeEducation__Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="APMDatabaseModel.FK__EmployeeExpertise__Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="APMDatabaseModel.FK__EmployeeLanguage__Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="APMDatabaseModel.FK__EmployeeOrganization__Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="APMDatabaseModel.FK__EmployeeReference__Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="APMDatabaseModel.FK__EmployeeRelative__Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="APMDatabaseModel.FK__EmployeeTraining__Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="APMDatabaseModel.FK_LeaveRequestDetail__Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="APMDatabaseModel.FK_Resignation__Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="APMDatabaseModel.FK_SalaryEmployee__Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="APMDatabaseModel.FK__Holiday__Tag" ManuallyRouted="false" />
+        <AssociationConnector Association="APMDatabaseModel.FK_EmployeeTransfer__Job" ManuallyRouted="false" />
+        <AssociationConnector Association="APMDatabaseModel.FK_EmployeeTransfer__Job1" ManuallyRouted="false" />
+        <AssociationConnector Association="APMDatabaseModel.FK__EmergeLeaveDetail__EmergeLeave" ManuallyRouted="false" />
+        <AssociationConnector Association="APMDatabaseModel.FK_LeaveAdjustment__EmergeLeave" ManuallyRouted="false" />
+        <AssociationConnector Association="APMDatabaseModel.FK_EmployeeTransfer__Organization" ManuallyRouted="false" />
+        <AssociationConnector Association="APMDatabaseModel.FK_EmployeeTransfer__Organization1" ManuallyRouted="false" />
+        <AssociationConnector Association="APMDatabaseModel.FK__OutputFileDetail__OutputFile" ManuallyRouted="false" />
+        <AssociationConnector Association="APMDatabaseModel.FK__OverTime__Tag" ManuallyRouted="false" />
+        <AssociationConnector Association="APMDatabaseModel.FK__OverTimeDetail__OverTime" ManuallyRouted="false" />
+        <AssociationConnector Association="APMDatabaseModel.FK__SalaryComponent__PaymentSchedule" ManuallyRouted="false" />
+        <AssociationConnector Association="APMDatabaseModel.FK__ReplacementDO__Tag" ManuallyRouted="false" />
+        <AssociationConnector Association="APMDatabaseModel.FK__ReplacementDODetail__ReplacementDO" ManuallyRouted="false" />
+        <AssociationConnector Association="APMDatabaseModel.FK_Resignation__ResignationType" ManuallyRouted="false" />
+        <AssociationConnector Association="APMDatabaseModel.FK__Roster__Tag" ManuallyRouted="false" />
+        <AssociationConnector Association="APMDatabaseModel.FK__SalaryComponentAttendanceCode__SalaryComponent" ManuallyRouted="false" />
+        <AssociationConnector Association="APMDatabaseModel.FK__SalaryComponentDetail__SalaryComponent" ManuallyRouted="false" />
+        <AssociationConnector Association="APMDatabaseModel.FK__SalaryComponentEmployee__SalaryComponent" ManuallyRouted="false" />
+        <AssociationConnector Association="APMDatabaseModel.FK__SalaryComponentLengthOfService__SalaryComponent" ManuallyRouted="false" />
+        <AssociationConnector Association="APMDatabaseModel.FK__SPTMasaDetail__SPTMasa" ManuallyRouted="false" />
+        <AssociationConnector Association="APMDatabaseModel.FK__WorkingPatternDetail__WorkingPattern" ManuallyRouted="false" />
+        <AssociationConnector Association="APMDatabaseModel.FK_AppraisalRequestComment_AppraisalRequest" ManuallyRouted="false" />
+        <AssociationConnector Association="APMDatabaseModel.FK_AppraisalRequestCompetencyCore_AppraisalRequest" ManuallyRouted="false" />
+        <AssociationConnector Association="APMDatabaseModel.FK_AppraisalRequestKPI_AppraisalRequest" ManuallyRouted="false" />
+        <AssociationConnector Association="APMDatabaseModel.FK_ClaimExtensionDetail_ClaimExtension" ManuallyRouted="false" />
+        <AssociationConnector Association="APMDatabaseModel.FK_ClaimRequestDetail_ClaimRequest" ManuallyRouted="false" />
+        <AssociationConnector Association="APMDatabaseModel.FK_LeaveExtensionDetail_LeaveExtension" ManuallyRouted="false" />
+        <AssociationConnector Association="APMDatabaseModel.FK_LNDActionPlan_LND" ManuallyRouted="false" />
+        <AssociationConnector Association="APMDatabaseModel.FK_LNDAspectAction_LND" ManuallyRouted="false" />
+        <AssociationConnector Association="APMDatabaseModel.FK_LNDAspectTopic_LND" ManuallyRouted="false" />
+        <AssociationConnector Association="APMDatabaseModel.FK_LNDCoach_LND" ManuallyRouted="false" />
+        <AssociationConnector Association="APMDatabaseModel.FK_LNDLastTopic_LND" ManuallyRouted="false" />
+        <AssociationConnector Association="APMDatabaseModel.FK_LNDObjective_LND" ManuallyRouted="false" />
+        <AssociationConnector Association="APMDatabaseModel.FK_LNDPreparation_LND" ManuallyRouted="false" />
+        <AssociationConnector Association="APMDatabaseModel.FK_LNDReview_LND" ManuallyRouted="false" />
+        <AssociationConnector Association="APMDatabaseModel.FK_LNDPlanningDetail_LNDPlanning" ManuallyRouted="false" />
+        <AssociationConnector Association="APMDatabaseModel.FK_LoanDetail_Loan" ManuallyRouted="false" />
+        <AssociationConnector Association="APMDatabaseModel.FK_PensionFundDetail_PensionFund" ManuallyRouted="false" />
+        <AssociationConnector Association="APMDatabaseModel.FK_ProcessQueueDetail_ProcessQueue" ManuallyRouted="false" />
+        <AssociationConnector Association="APMDatabaseModel.FK_ResignationDetail_Resignation" ManuallyRouted="false" />
+        <AssociationConnector Association="APMDatabaseModel.FK_SalaryAdjustmentGlobalDetail_SalaryAdjustmentGlobal" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

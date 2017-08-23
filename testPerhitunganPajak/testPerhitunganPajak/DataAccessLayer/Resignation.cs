@@ -14,6 +14,12 @@ namespace testPerhitunganPajak.DataAccessLayer
     
     public partial class Resignation
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Resignation()
+        {
+            this.ResignationDetails = new HashSet<ResignationDetail>();
+        }
+    
         public System.Guid Id { get; set; }
         public string Number { get; set; }
         public Nullable<System.DateTime> Date { get; set; }
@@ -85,8 +91,12 @@ namespace testPerhitunganPajak.DataAccessLayer
         public Nullable<decimal> SeparationPayTotal { get; set; }
         public string ESeparationPay { get; set; }
         public string ESeparationPayTotal { get; set; }
+        public Nullable<System.Guid> ResignationReasonId { get; set; }
+        public Nullable<int> NumberOfInstallment { get; set; }
     
         public virtual C_Employee C_Employee { get; set; }
         public virtual C_ResignationType C_ResignationType { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ResignationDetail> ResignationDetails { get; set; }
     }
 }

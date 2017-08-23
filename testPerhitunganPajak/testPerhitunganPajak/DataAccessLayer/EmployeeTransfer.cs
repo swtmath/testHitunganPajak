@@ -33,6 +33,16 @@ namespace testPerhitunganPajak.DataAccessLayer
         public decimal AutoNumber { get; set; }
         public Nullable<int> Status { get; set; }
         public Nullable<System.DateTime> EndEffectiveDate { get; set; }
+        public Nullable<System.Guid> EmpTransferReasonId { get; set; }
+        public Nullable<System.Guid> FromJobHRId { get; set; }
+        public Nullable<System.Guid> FromOrganizationHRId { get; set; }
+        public Nullable<System.Guid> FromBranchHRId { get; set; }
+        public Nullable<System.Guid> ToJobHRId { get; set; }
+        public Nullable<System.Guid> ToOrganizationHRId { get; set; }
+        public Nullable<System.Guid> ToBranchHRId { get; set; }
+        public Nullable<int> EmployeeTransferType { get; set; }
+        public Nullable<System.DateTime> PlacementExpiredDate { get; set; }
+        public Nullable<System.Guid> EmployeeTransferParentId { get; set; }
     
         public virtual C_Job C_Job { get; set; }
         public virtual C_Job C_Job1 { get; set; }

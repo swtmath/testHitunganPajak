@@ -31,6 +31,8 @@ namespace testPerhitunganPajak.DataAccessLayer
         public Nullable<System.Guid> ReferenceId { get; set; }
         public Nullable<bool> ReportFilter { get; set; }
         public Nullable<int> VisibleReminder { get; set; }
+        public string CustomFieldGroup { get; set; }
+        public Nullable<int> Mandatory { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<C_CustomField> C_CustomField { get; set; }

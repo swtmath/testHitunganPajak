@@ -27,6 +27,7 @@ namespace testPerhitunganPajak.DataAccessLayer
         public Nullable<decimal> TrainingFee { get; set; }
         public Nullable<decimal> Rating { get; set; }
         public Nullable<System.Guid> ProviderId { get; set; }
+        public Nullable<System.Guid> TrainingGroupId { get; set; }
     
         public virtual C_Employee C_Employee { get; set; }
     }

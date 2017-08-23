@@ -56,6 +56,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
@@ -69,639 +70,690 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataAccess.cs" />
+    <Compile Include="DataAccessLayer\APMDatabaseModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>APMDatabaseModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\APMDatabaseModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\APMDatabaseModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>APMDatabaseModel.edmx</DependentUpon>
+    </Compile>
     <Compile Include="DataAccessLayer\AppraisalRequest.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\AppraisalRequestComment.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\AppraisalRequestCompetencyCore.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\AppraisalRequestKPI.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\AttendanceMachine.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\Award.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\ClaimAdjustment.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\ClaimExtension.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\ClaimExtensionDetail.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\ClaimRequest.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\ClaimRequestDetail.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_AccountJournal.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_AccountJournalCostCenter.cs">
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_AccountJournalDetail.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_AccountJournalOrganization.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_AttachmentImage.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_AttendanceCode.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_AttendanceType.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_AutoNumber.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_AutoNumberDetail.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_AutoNumberPool.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_AutoNumberPoolDetail.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_BaseRate.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_BaseRateAttendanceCode.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_BaseRateDetail.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_BaseRateGroupType.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_BaseRateTag.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_BaseRateTag2.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_BlackListIdNumber.cs">
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_Branch.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_BranchAsset.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_Break.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_BreakDetail.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_Calendar.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_CalendarDetail.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_CashTransferField.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_CashTransferFieldDetail.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_Claim.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_ClaimDetail.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_Class.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_Company.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_Competency.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_CompetencyAppraisal.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_CompetencyBranch.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_CompetencyCore.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_CompetencyCoreAppraisal.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_CompetencyCoreGrade.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_CompetencyCoreKeyAction.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_CompetencyCoreScale.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_CompetencyFinalResult.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_CompetencyGrade.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_CompetencyJob.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_CompetencyJobResult.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_CompetencyKPI.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_CompetencyKPIResult.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_CostNotaDinas.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_CostNotaDinasActivity.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_CostNotaDinasActivityDetail.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_CostNotaDinasDetail.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_CostNotaDinasDetailJobTitle.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_CostNotaDinasDetailTypeSchedule.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_CostNotaDinasDetailTypeTransport.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_CostNotaDinasMatrix.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_CostNotaDinasMatrixDetail.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_CurrencyRate.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_CustomField.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_CustomFieldData.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_CustomFieldDefinition.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_CustomFieldHistory.cs">
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_DropDownItem.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_DropDownItemDetail.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_Employee.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_EmployeeBank.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_EmployeeBranchAsset.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_EmployeeCC.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_EmployeeCostCenter.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_EmployeeDependent.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_EmployeeDocument.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_EmployeeEducation.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_EmployeeEmergeClaim.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_EmployeeEmergeLeave.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_EmployeeEmergeRO.cs">
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_EmployeeExperience.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_EmployeeExpertise.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_EmployeeLanguage.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_EmployeeOrganization.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_EmployeeReference.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_EmployeeRelative.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_EmployeeTraining.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_Grade.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_GroupData.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_Holiday.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_JamSosTek.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_Job.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_JobTitle.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_Leave.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_LeaveDetail.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_LNDTopic.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_LNDTopicGroup.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_MinimumWageRegional.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_MinimumWageRegionalDetail.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_NomorReport1721A1.cs">
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_NPPJamsostek.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_Organization.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_OrganizationYear.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_OutputFile.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_OutputFileDetail.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_OverTime.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_OverTimeDetail.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_OverTimeGroupOverTime.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_OverTimeGroupTag.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_PaymentSchedule.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_PaySlipField.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_PaySlipFieldDetail.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_PaySlipFieldDetailComponent.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_PPH21.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_Provider.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_ReplacementDO.cs">
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_ReplacementDODetail.cs">
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_Report.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_ReportTemplate.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_ResignationMatrix.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_ResignationType.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_ROGroupTag.cs">
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_Roster.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_RosterOverTimeDetail.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_RosterRODetail.cs">
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_RoundingOvertime.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_RoundingReplacementDO.cs">
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_SalaryComponent.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_SalaryComponentAttendanceCode.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_SalaryComponentDetail.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_SalaryComponentEmployee.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_SalaryComponentLengthOfService.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_SalaryComponentTag.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_SettingMandatoryField.cs">
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_Severance.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_SeveranceMeritPay.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_SPTMasa.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_SPTMasaDetail.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_SystemInfo.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_SystemPolling.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_SystemStatus.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_Tag.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_Tax.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_User.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_UserDetail.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_UserGroup.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_UserProfile.cs">
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_UserProfileCustomFind.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_UserProfileDetail.cs">
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_UserProfileFind.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_Version.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C_WorkGroup.cs">
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_WorkingPattern.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_WorkingPatternDetail.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C_WorkingShift.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C__Employee.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C__EmployeeEmergeLeave.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C__EmployeeSalaryComponent.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C__Roster.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C__SalaryComponent.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\C__SalaryEmployeePayment.cs">
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\C__UserPassword.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\EmployeeTransaction.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\EmployeeTransfer.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\EmployeeTransferDetail.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="DataAccessLayer\GetData.cs" />
     <Compile Include="DataAccessLayer\LeaveAdjustment.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\LeaveCompensation.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\LeaveCompensationDetail.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\LeaveExtension.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\LeaveExtensionDetail.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\LeaveRequest.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\LND.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\LNDActionPlan.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\LNDAspectAction.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\LNDAspectTopic.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\LNDCoach.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\LNDLastTopic.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\LNDObjective.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\LNDPlanning.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\LNDPlanningDetail.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\LNDPreparation.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\LNDReview.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\Loan.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\LoanDetail.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\MaintenanceLog.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DataAccessLayer\Model1.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DataAccessLayer\Model1.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DataAccessLayer\Model1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.edmx</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\News.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\NotaDina.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\NotaDinasCC.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\NotaDinasDocument.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\NotaDinasEmployee.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\NotaDinasEmployeeDate.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\OvertimeRequest.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\Payment.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\PensionFund.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\PensionFundDetail.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\PermitRequest.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\ProcessQueue.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\ProcessQueueDetail.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\Resignation.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\ResignationBranchAsset.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\ResignationDetail.cs">
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\ResourcesCenter.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\RollBackTransaction.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\RORequest.cs">
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\SalaryAdjustment.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\SalaryAdjustmentDetail.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\SalaryAdjustmentGlobal.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\SalaryAdjustmentGlobalDetail.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\SalaryEmployee.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\SalaryEmployeeCustom.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\SalaryEmployeePayment.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\SalaryReductionUnReduction.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\StatusAlteration.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\TaxStatusAlteration.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\TaxStatusAlterationDetail.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\Training.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\TrainingAnswer.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\TrainingDetail.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\TrainingQuestion.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\UserActivity.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\Warning.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>APMDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -709,7 +761,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Perhitungan.cs" />
+    <Compile Include="BusinessDataLayer\Perhitungan.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -724,13 +776,13 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EntityDeploy Include="DataAccessLayer\Model1.edmx">
+    <EntityDeploy Include="DataAccessLayer\APMDatabaseModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+      <LastGenOutput>APMDatabaseModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
     <None Include="App.Config" />
-    <None Include="DataAccessLayer\Model1.edmx.diagram">
-      <DependentUpon>Model1.edmx</DependentUpon>
+    <None Include="DataAccessLayer\APMDatabaseModel.edmx.diagram">
+      <DependentUpon>APMDatabaseModel.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -755,21 +807,21 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
-  <ItemGroup>
-    <Content Include="DataAccessLayer\Model1.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model1.edmx</DependentUpon>
-      <LastGenOutput>Model1.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="DataAccessLayer\Model1.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model1.edmx</DependentUpon>
-      <LastGenOutput>Model1.cs</LastGenOutput>
-    </Content>
-  </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="DataAccessLayer\APMDatabaseModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>APMDatabaseModel.edmx</DependentUpon>
+      <LastGenOutput>APMDatabaseModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DataAccessLayer\APMDatabaseModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>APMDatabaseModel.edmx</DependentUpon>
+      <LastGenOutput>APMDatabaseModel.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

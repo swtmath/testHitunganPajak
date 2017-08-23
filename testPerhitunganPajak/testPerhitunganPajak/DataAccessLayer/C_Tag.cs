@@ -20,6 +20,7 @@ namespace testPerhitunganPajak.DataAccessLayer
             this.C_CalendarDetail = new HashSet<C_CalendarDetail>();
             this.C_Holiday = new HashSet<C_Holiday>();
             this.C_OverTime = new HashSet<C_OverTime>();
+            this.C_ReplacementDO = new HashSet<C_ReplacementDO>();
             this.C_Roster = new HashSet<C_Roster>();
         }
     
@@ -42,6 +43,8 @@ namespace testPerhitunganPajak.DataAccessLayer
         public virtual ICollection<C_Holiday> C_Holiday { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<C_OverTime> C_OverTime { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<C_ReplacementDO> C_ReplacementDO { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<C_Roster> C_Roster { get; set; }
     }

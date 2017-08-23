@@ -12,32 +12,26 @@ namespace testPerhitunganPajak.DataAccessLayer
     using System;
     using System.Collections.Generic;
     
-    public partial class C_Job
+    public partial class C_ReplacementDO
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public C_Job()
+        public C_ReplacementDO()
         {
-            this.EmployeeTransfers = new HashSet<EmployeeTransfer>();
-            this.EmployeeTransfers1 = new HashSet<EmployeeTransfer>();
+            this.C_ReplacementDODetail = new HashSet<C_ReplacementDODetail>();
         }
     
         public System.Guid Id { get; set; }
-        public Nullable<System.Guid> ParentId { get; set; }
-        public Nullable<System.Guid> JobTitleId { get; set; }
-        public Nullable<System.Guid> BranchId { get; set; }
-        public string Name { get; set; }
-        public Nullable<int> Level { get; set; }
-        public string Description { get; set; }
+        public Nullable<System.Guid> TagId { get; set; }
+        public Nullable<System.Guid> GroupDataId { get; set; }
+        public Nullable<int> Type { get; set; }
         public Nullable<System.Guid> CreatedBy { get; set; }
         public Nullable<System.DateTime> CreatedDate { get; set; }
         public Nullable<System.Guid> ModifiedBy { get; set; }
         public Nullable<System.DateTime> ModifiedDate { get; set; }
-        public string Initial { get; set; }
-        public string CostCenterNumber { get; set; }
+        public string Name { get; set; }
     
+        public virtual C_Tag C_Tag { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<EmployeeTransfer> EmployeeTransfers { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<EmployeeTransfer> EmployeeTransfers1 { get; set; }
+        public virtual ICollection<C_ReplacementDODetail> C_ReplacementDODetail { get; set; }
     }
 }

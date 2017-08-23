@@ -154,6 +154,11 @@ namespace testPerhitunganPajak.DataAccessLayer
         public string ZipCode1 { get; set; }
         public string ZipCode2 { get; set; }
         public string EmailPayslip { get; set; }
+        public Nullable<System.Guid> WorkingShiftGroupId { get; set; }
+        public Nullable<System.Guid> BranchHRId { get; set; }
+        public Nullable<System.Guid> JobHRId { get; set; }
+        public Nullable<System.Guid> OrganizationHRId { get; set; }
+        public Nullable<System.Guid> ROGroupId { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<C__Employee> C__Employee { get; set; }

@@ -42,6 +42,7 @@ namespace testPerhitunganPajak.DataAccessLayer
         public Nullable<System.Guid> JobTitleId { get; set; }
         public Nullable<System.Guid> OrganizationId { get; set; }
         public Nullable<System.DateTime> LastAccessDate { get; set; }
+        public Nullable<System.Guid> userProfileId { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<C__UserPassword> C__UserPassword { get; set; }

@@ -33,6 +33,9 @@ namespace testPerhitunganPajak.DataAccessLayer
         public Nullable<System.DateTime> ModifiedDate { get; set; }
         public Nullable<bool> Hrd { get; set; }
         public string Initial { get; set; }
+        public string LineOfBusiness { get; set; }
+        public string Location { get; set; }
+        public string CostCenterNumber { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<EmployeeTransfer> EmployeeTransfers { get; set; }
