@@ -70,6 +70,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusinessDataLayer\Pajak.cs" />
+    <Compile Include="BusinessDataLayer\PajakTypeData.cs" />
     <Compile Include="DataAccessLayer\APMDatabaseModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
