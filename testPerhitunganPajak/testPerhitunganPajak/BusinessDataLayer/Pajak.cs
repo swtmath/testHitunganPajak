@@ -85,11 +85,24 @@ namespace testPerhitunganPajak.BusinessDataLayer
             decimal hasil = 0;
             int lengthCalculationPeriod = periodEnd - periodStart + 1;
             int lengthCurrentPeriod = periodCurrent - periodStart + 1;
-            if (taxCalculationMethod == PajakTypeData.TaxCalculationMethod.WeightedAverage)
+            int lengthForecastPeriod = periodEnd - periodCurrent + 1;
+            if (periodCurrent == periodEnd)
+            {
+                hasil = brutoPrev + brutoPrevBonus + brutoCurrent;
+            }
+            else if (taxCalculationMethod == PajakTypeData.TaxCalculationMethod.WeightedAverage)
             {
                 decimal brutoAvg = (brutoPrev + brutoCurrent) / lengthCurrentPeriod;
                 hasil = brutoAvg * lengthCalculationPeriod;
                 hasil = hasil + brutoPrevBonus;
+            }
+            else if(taxCalculationMethod== PajakTypeData.TaxCalculationMethod.Forecast)
+            {
+                hasil = brutoPrev + brutoPrevBonus + brutoCurrent * lengthForecastPeriod;
+            }
+            else if (taxCalculationMethod == PajakTypeData.TaxCalculationMethod.Annually)
+            {
+                hasil = brutoCurrent * lengthCalculationPeriod;
             }
             return hasil;
         }
