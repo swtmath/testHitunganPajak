@@ -8,11 +8,18 @@ namespace testPerhitunganPajak.BusinessDataLayer
 {
     class PajakTypeData
     {
-        enum TaxCalculationMethod
+        public enum TaxCalculationMethod
         {
             Annually,
             Forecast,
             WeightedAverage
+        };
+        public enum TaxType
+        {
+            NoTax=1,
+            TaxComp,
+            TaxEmp,
+            TaxAllowance
         };
     }
 }
