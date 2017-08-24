@@ -106,5 +106,39 @@ namespace testPerhitunganPajak.BusinessDataLayer
             }
             return hasil;
         }
-    }
+		public static decimal CalculateBpjsOrPensionYearly(PajakTypeData.TaxCalculationMethod taxCalculationMethod, decimal pensionCurrent, decimal pensionPrev, int periodStart, int periodEnd, int periodCurrent)
+		{
+			decimal hasil = 0;
+			int lengthCalculationPeriod = periodEnd - periodStart + 1;
+			int lengthCurrentPeriod = periodCurrent - periodStart + 1;
+			int lengthForecastPeriod = periodEnd - periodCurrent + 1;
+			if (periodCurrent == periodEnd)
+			{
+				hasil = pensionPrev + pensionCurrent;
+			}
+			else if (taxCalculationMethod == PajakTypeData.TaxCalculationMethod.WeightedAverage)
+			{
+				decimal brutoAvg = (pensionPrev + pensionCurrent) / lengthCurrentPeriod;
+				hasil = brutoAvg * lengthCalculationPeriod;
+			}
+			else if (taxCalculationMethod == PajakTypeData.TaxCalculationMethod.Forecast)
+			{
+				hasil = pensionPrev + pensionCurrent * lengthForecastPeriod;
+			}
+			else if (taxCalculationMethod == PajakTypeData.TaxCalculationMethod.Annually)
+			{
+				hasil = pensionCurrent * lengthCalculationPeriod;
+			}
+			return hasil;
+		}
+		public static decimal CalculateBiayaJabatan(decimal bruto,int periodStart, int periodEnd)
+		{
+			decimal hasil = 0;
+			decimal maxBiayaJabatan = 6000000;
+			int persentaseBiayaJabatan = 5;
+			int lengthCalculationPeriod = periodEnd - periodStart + 1;
+			hasil = Math.Min(maxBiayaJabatan * lengthCalculationPeriod / 12, bruto * persentaseBiayaJabatan / 100);
+			return hasil;
+		}
+	}
 }
