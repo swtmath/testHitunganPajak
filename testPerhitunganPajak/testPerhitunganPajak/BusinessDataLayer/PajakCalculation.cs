@@ -73,11 +73,13 @@ namespace testPerhitunganPajak.BusinessDataLayer
 			}
 			return hasil;
 		}
-		public static decimal CalculateBiayaJabatan(decimal bruto, int periodStart, int periodEnd)
+		public static decimal CalculateBiayaJabatan(decimal bruto, int periodStart, int periodEnd, PajakTypeData.EmployeeCondition employeeCondition)
 		{
 			decimal hasil = 0;
-			int lengthCalculationPeriod = periodEnd - periodStart + 1;
-			hasil = Min(PajakTypeData.MaxBiayaJabatan * lengthCalculationPeriod / 12, bruto * PajakTypeData.PersentaseBiayaJabatan / 100);
+            int lengthCalculationPeriod;
+            if (employeeCondition == PajakTypeData.EmployeeCondition.Transfer) lengthCalculationPeriod = 12 - periodStart + 1;
+            else lengthCalculationPeriod = periodEnd - periodStart + 1;
+            hasil = Min(PajakTypeData.MaxBiayaJabatan * lengthCalculationPeriod / 12, bruto * PajakTypeData.PersentaseBiayaJabatan / 100);
 			return hasil;
 		}
 		public static decimal CalculateNettoYearly(decimal brutoYearly, decimal JHTYearly, decimal JPYearly, decimal pensionYearly, decimal biayaJabatan, decimal begSalaryNetto)

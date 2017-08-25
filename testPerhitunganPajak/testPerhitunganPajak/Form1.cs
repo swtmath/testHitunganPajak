@@ -63,7 +63,7 @@ namespace testPerhitunganPajak
             jhtYearly = PajakCalculation.CalculateBpjsOrPensionYearly(taxCalculationMethod, jhtCurrent, jhtPrev, periodStart, periodEnd, periodCurent, employeeCondition);
             jpYearly = PajakCalculation.CalculateBpjsOrPensionYearly(taxCalculationMethod, jpCurrent, jpPrev, periodStart, periodEnd, periodCurent, employeeCondition);
             pensionYearly = PajakCalculation.CalculateBpjsOrPensionYearly(taxCalculationMethod, pensionCurrent, pensionPrev, periodStart, periodEnd, periodCurent, employeeCondition);
-            biayaJabatan = PajakCalculation.CalculateBiayaJabatan(brutoYearly, periodStart, periodEnd);
+            biayaJabatan = PajakCalculation.CalculateBiayaJabatan(brutoYearly, periodStart, periodEnd,employeeCondition);
 
             nettoYearly = PajakCalculation.CalculateNettoYearly(brutoYearly, jhtYearly, jpYearly, pensionYearly, biayaJabatan, begSalaryNetto);
             PTKP = PajakCalculation.CalculatePTKP(fMarried, tanggungan);
