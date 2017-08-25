@@ -22,16 +22,20 @@ namespace testPerhitunganPajak
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Guid employeeId = GetData.GetEmployee("14 2421").Id;
-            string period = "201704";
-            TaxCalculationMethod taxCalculationMethod = TaxCalculationMethod.WeightedAverage;
-            TaxType taxType = TaxType.TaxEmp;
-            decimal brutoPrev,brutoPrevBonus, brutoCurrent;
-            brutoPrev = Pajak.CountBrutoListPayment(GetData.GetListPrevPeriodSalaryEmployeePayment(employeeId, period.Substring(0, 4), period, taxType));
-            brutoPrevBonus = Pajak.CountBrutoBonusListPayment(GetData.GetListPrevPeriodSalaryEmployeePayment(employeeId, period.Substring(0, 4), period, taxType));
-            brutoCurrent = Pajak.CountBruto(GetData.GetSalaryEmployeePayment(employeeId, period, taxType));
+            //Guid employeeId = GetData.GetEmployee("14 2421").Id;
+            //string period = "201704";
+            //TaxCalculationMethod taxCalculationMethod = TaxCalculationMethod.WeightedAverage;
+            //TaxType taxType = TaxType.TaxEmp;
+            //decimal brutoPrev,brutoPrevBonus, brutoCurrent;
+            //brutoPrev = Pajak.CountBrutoListPayment(GetData.GetListPrevPeriodSalaryEmployeePayment(employeeId, period.Substring(0, 4), period, taxType));
+            //brutoPrevBonus = Pajak.CountBrutoBonusListPayment(GetData.GetListPrevPeriodSalaryEmployeePayment(employeeId, period.Substring(0, 4), period, taxType));
+            //brutoCurrent = Pajak.CountBruto(GetData.GetSalaryEmployeePayment(employeeId, period, taxType));
 
-            Pajak.CalculateBrutoYearly(employeeId, taxCalculationMethod, brutoCurrent, brutoPrev, brutoPrevBonus, 1, 12, int.Parse(period.Substring(4, 2)));
+            //Pajak.CalculateBrutoYearly(employeeId, taxCalculationMethod, brutoCurrent, brutoPrev, brutoPrevBonus, 1, 12, int.Parse(period.Substring(4, 2)));
+            decimal a = 762036872;
+			decimal b = Pajak.CalculatePKP(a, Pajak.CalculatePTKP(false, 0));
+			decimal c = Pajak.CalculateTaxYearly(b,false);
+			label1.Text = c.ToString("#,0.00");
         }
     }
 }

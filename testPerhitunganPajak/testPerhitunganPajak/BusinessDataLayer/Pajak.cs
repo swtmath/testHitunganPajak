@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using testPerhitunganPajak.DataAccessLayer;
+using static System.Math;
+
 
 namespace testPerhitunganPajak.BusinessDataLayer
 {
@@ -134,11 +136,58 @@ namespace testPerhitunganPajak.BusinessDataLayer
 		public static decimal CalculateBiayaJabatan(decimal bruto,int periodStart, int periodEnd)
 		{
 			decimal hasil = 0;
-			decimal maxBiayaJabatan = 6000000;
-			int persentaseBiayaJabatan = 5;
 			int lengthCalculationPeriod = periodEnd - periodStart + 1;
-			hasil = Math.Min(maxBiayaJabatan * lengthCalculationPeriod / 12, bruto * persentaseBiayaJabatan / 100);
+			hasil = Min(PajakTypeData.MaxBiayaJabatan * lengthCalculationPeriod / 12, bruto * PajakTypeData.PersentaseBiayaJabatan / 100);
 			return hasil;
 		}
+        public static decimal CalculateNettoYearly(decimal brutoYearly, decimal JHTYearly, decimal JPYearly, decimal pensionYearly, decimal biayaJabatan, decimal begSalaryNetto)
+        {
+            return brutoYearly - biayaJabatan - JHTYearly - JPYearly - pensionYearly + begSalaryNetto;
+        }
+        public static decimal CalculatePTKP (bool kawin,int tanggungan)
+        {
+            decimal hasil = PajakTypeData.PTKPIndividu;
+            if (kawin) hasil += PajakTypeData.PTKPAddOn;
+            hasil = hasil + PajakTypeData.PTKPAddOn * tanggungan;
+            return hasil;
+        }
+        public static decimal CalculatePKP(decimal nettoYearly, decimal PTKP)
+        {
+            decimal hasil = 0;
+            hasil = nettoYearly - PTKP;
+            int hasil2 = (int)hasil / 1000;
+            hasil2 = hasil2 * 1000;
+            return hasil2;
+        }
+		public static decimal CalculateTaxYearly(decimal PKP,bool fNPWP)
+		{
+			decimal hasil = 0;
+			hasil = hasil + Max(0, Min(PKP, PajakTypeData.TaxBracketNominal1)) * PajakTypeData.TaxBracketPercentage1 / 100;
+			if (PKP > PajakTypeData.TaxBracketNominal1) hasil = hasil + Max(0, Min(PKP, PajakTypeData.TaxBracketNominal2) - PajakTypeData.TaxBracketNominal1) * PajakTypeData.TaxBracketPercentage2 / 100;
+			if (PKP > PajakTypeData.TaxBracketNominal2) hasil = hasil + Max(0, Min(PKP, PajakTypeData.TaxBracketNominal3) - PajakTypeData.TaxBracketNominal2) * PajakTypeData.TaxBracketPercentage3 / 100;
+			if (PKP > PajakTypeData.TaxBracketNominal3) hasil = hasil + Max(0, PKP - PajakTypeData.TaxBracketNominal3) * PajakTypeData.TaxBracketPercentage4 / 100;
+			if (!fNPWP) hasil = hasil * (100 + PajakTypeData.NoNPWPPercentage) / 100;
+			return hasil;
+		}
+		public static decimal CalculateTaxMonthly(decimal taxYearly,decimal sumTaxPrev, decimal sumTaxPrevbonus, int periodStart, int periodEnd, int periodCurrent,decimal begSalaryPPh21, PajakTypeData.TaxCalculationMethod taxCalculationMethod)
+		{
+			decimal hasil = 0;
+			int lengthCalculationPeriod = periodEnd - periodStart + 1;
+			int lengthCurrentPeriod = periodCurrent - periodStart + 1;
+			int lengthForecastPeriod = periodEnd - periodCurrent + 1;
+			if (periodCurrent == periodEnd)
+			{
+				hasil = taxYearly - sumTaxPrev- sumTaxPrevbonus - begSalaryPPh21;
+			}
+			else if (taxCalculationMethod == PajakTypeData.TaxCalculationMethod.WeightedAverage)
+			{
+				hasil = taxYearly - sumTaxPrevbonus - begSalaryPPh21;
+				hasil = hasil * lengthCurrentPeriod / lengthCalculationPeriod;
+				hasil = hasil - sumTaxPrev;
+			}
+
+			return hasil;
+		}
+
 	}
 }
