@@ -33,5 +33,12 @@ namespace testPerhitunganPajak.BusinessDataLayer
             TaxEmp,
             TaxAllowance
         };
+		public enum EmployeeCondition
+		{
+			Normal,
+			NewEmployee,
+			Resign,
+			Transfer
+		};
     }
 }

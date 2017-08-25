@@ -70,7 +70,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BusinessDataLayer\Pajak.cs" />
+    <Compile Include="BusinessDataLayer\PajakData.cs" />
+    <Compile Include="BusinessDataLayer\PajakCalculation.cs" />
     <Compile Include="BusinessDataLayer\PajakTypeData.cs" />
     <Compile Include="DataAccessLayer\APMDatabaseModel.Context.cs">
       <AutoGen>True</AutoGen>
@@ -763,7 +764,6 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="BusinessDataLayer\Perhitungan.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
