@@ -23,7 +23,7 @@ namespace testPerhitunganPajak
         private void button1_Click(object sender, EventArgs e)
         {
 			Guid employeeId = GetData.GetEmployee("14 2421").Id;
-			string period = "201705";
+			string period = "201703";
 			TaxCalculationMethod taxCalculationMethod = TaxCalculationMethod.WeightedAverage;
 			TaxType taxType = TaxType.TaxEmp;
 			decimal brutoPrev, brutoPrevBonus, brutoCurrent,jhtPrev,jhtCurrent,jpPrev,jpCurrent,pensionPrev,pensionCurrent;

@@ -147,5 +147,11 @@ namespace testPerhitunganPajak.BusinessDataLayer
             hasil = Round(hasil, 0);
 			return hasil;
 		}
+		public static decimal CalculateBrutoWithBonusYearly(decimal brutoYearly, decimal brutoBonus)
+		{
+			decimal hasil = 0;
+			hasil = brutoYearly + brutoBonus;
+			return hasil;
+		}
 	}
 }
