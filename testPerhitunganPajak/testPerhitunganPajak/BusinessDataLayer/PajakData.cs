@@ -9,7 +9,7 @@ using static System.Math;
 
 namespace testPerhitunganPajak.BusinessDataLayer
 {
-    class PajakData
+	public class PajakData
     {
 
         //menghitung bruto dari 1 baris salary employee payment
@@ -83,82 +83,59 @@ namespace testPerhitunganPajak.BusinessDataLayer
 			pension = salaryEmployeePayment.RPensionEmp.Value;
 			return pension;
 		}
-		public static decimal CountJHTListPayment(List<DataAccessLayer.SalaryEmployeePayment> listPayment)
+		public static decimal CountJHTListPayment(List<SalaryEmployeePayment> listPayment)
 		{
-			decimal sumJHT = 0;
-			foreach (var a in listPayment)
-			{
-				sumJHT += CountJHT(a);
-			}
-			return sumJHT;
+			return listPayment.Sum(a => CountJHT(a));
 		}
-		public static decimal CountJPListPayment(List<DataAccessLayer.SalaryEmployeePayment> listPayment)
+		public static decimal CountJPListPayment(List<SalaryEmployeePayment> listPayment)
 		{
-			decimal SumJP = 0;
-			foreach (var a in listPayment)
-			{
-				SumJP += CountJP(a);
-			}
-			return SumJP;
+			return listPayment.Sum(a => CountJP(a));
 		}
-		public static decimal CountPensionListPayment(List<DataAccessLayer.SalaryEmployeePayment> listPayment)
+		public static decimal CountPensionListPayment(List<SalaryEmployeePayment> listPayment)
 		{
-			decimal sumPension = 0;
-			foreach (var a in listPayment)
-			{
-				sumPension += CountPension(a);
-			}
-			return sumPension;
+			return listPayment.Sum(a => CountPension(a));
 		}
 		//mengitung total bruto dari list employee payment
 		public static decimal CountBrutoWithBonusListPayment (List<DataAccessLayer.SalaryEmployeePayment> listPayment)
 		{
-			decimal sumBruto = 0;
-			foreach(var a in listPayment)
-			{
-				sumBruto += CountBrutoWithBonus(a);
-			}
-			return sumBruto;
+			return listPayment.Sum(a => CountBrutoWithBonus(a));
 		}
         public static decimal CountBrutoListPayment(List<DataAccessLayer.SalaryEmployeePayment> listPayment)
         {
-            decimal sumBruto = 0;
-            foreach (var a in listPayment)
-            {
-                sumBruto += CountBruto(a);
-            }
-            return sumBruto;
+	        return listPayment.Sum(a => CountBruto(a));
         }
         public static decimal CountBrutoBonusListPayment(List<DataAccessLayer.SalaryEmployeePayment> listPayment)
         {
-            decimal sumBruto = 0;
-            foreach (var a in listPayment)
-            {
-                sumBruto += CountBrutoBonus(a);
-            }
-            return sumBruto;
+	        return listPayment.Sum(a => CountBrutoBonus(a));
         }
 		public static PajakTypeData.EmployeeCondition GetEmployeeCondition(SalaryEmployeePayment salaryEmployeePayment)
 		{
-			PajakTypeData.EmployeeCondition employeeCondition;
+			PajakTypeData.EmployeeCondition employeeCondition= PajakTypeData.EmployeeCondition.Normal;
+			if (salaryEmployeePayment.EmployeeCondition == null) return employeeCondition;
 			switch (salaryEmployeePayment.EmployeeCondition.Value)
 			{
-				case 0: employeeCondition = PajakTypeData.EmployeeCondition.Normal; break;
-				case 1: employeeCondition = PajakTypeData.EmployeeCondition.NewEmployee; break;
-				case 2: employeeCondition = PajakTypeData.EmployeeCondition.Resign; break;
-				case 3: employeeCondition = PajakTypeData.EmployeeCondition.Transfer; break;
-				default: employeeCondition = PajakTypeData.EmployeeCondition.Normal; break;
+				case 0:
+					employeeCondition = PajakTypeData.EmployeeCondition.Normal;
+					break;
+				case 1:
+					employeeCondition = PajakTypeData.EmployeeCondition.NewEmployee;
+					break;
+				case 2:
+					employeeCondition = PajakTypeData.EmployeeCondition.Resign;
+					break;
+				case 3:
+					employeeCondition = PajakTypeData.EmployeeCondition.Transfer;
+					break;
+				default:
+					employeeCondition = PajakTypeData.EmployeeCondition.Normal;
+					break;
 			}
 			return employeeCondition;
 		}
 		public static int GetFirstPeriod(List<SalaryEmployeePayment> listPayment)
 		{
 			int period = 0;
-			if (listPayment.Count == 0) period = 1;
-			else
-			{
-				period = int.Parse(listPayment.First().PaymentPeriod.Substring(4, 2));
-			}
+			period = listPayment.Count == 0 ? 1 : int.Parse(listPayment.First().PaymentPeriod.Substring(4, 2));
 			return period;
 		}
 		public static int GetCurrentPeriod(SalaryEmployeePayment salaryEmployeePayment)
@@ -204,21 +181,11 @@ namespace testPerhitunganPajak.BusinessDataLayer
         }
         public static decimal CountPPh21ListPayment(List<DataAccessLayer.SalaryEmployeePayment> listPayment)
         {
-            decimal sumPPh21 = 0;
-            foreach (var a in listPayment)
-            {
-                sumPPh21 += CountPPh21(a);
-            }
-            return sumPPh21;
+	        return listPayment.Sum(a => CountPPh21(a));
         }
         public static decimal CountPPh21BonusListPayment(List<DataAccessLayer.SalaryEmployeePayment> listPayment)
         {
-            decimal sumPPh21 = 0;
-            foreach (var a in listPayment)
-            {
-                sumPPh21 += CountPPh21Bonus(a);
-            }
-            return sumPPh21;
+	        return listPayment.Sum(a => CountPPh21Bonus(a));
         }
     }
 }

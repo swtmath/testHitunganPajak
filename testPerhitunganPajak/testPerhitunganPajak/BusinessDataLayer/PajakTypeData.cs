@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace testPerhitunganPajak.BusinessDataLayer
 {
-    class PajakTypeData
+	public class PajakTypeData
     {
         public const decimal MaxBiayaJabatan = 6000000;
         public const int PersentaseBiayaJabatan = 5;

@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static System.Math;
+﻿using static System.Math;
 namespace testPerhitunganPajak.BusinessDataLayer
 {
-	class PajakCalculation
+	public class PajakCalculation
 	{
 		public static decimal CalculateBrutoYearly(PajakTypeData.TaxCalculationMethod taxCalculationMethod, decimal brutoCurrent, decimal brutoPrev, decimal brutoPrevBonus, int periodStart, int periodEnd, int periodCurrent,PajakTypeData.EmployeeCondition employeeCondition)
 		{
@@ -119,15 +114,13 @@ namespace testPerhitunganPajak.BusinessDataLayer
 			int lengthForecastPeriod = periodEnd - periodCurrent + 1;
 			if (periodCurrent == periodEnd)
 			{
-                if (employeeCondition == PajakTypeData.EmployeeCondition.Transfer)
-                {
-                    hasil = taxYearly * lengthCalculationPeriod / 12;
-                    hasil = hasil - sumTaxPrev - sumTaxPrevbonus - begSalaryPPh21;
-                }
-                else
-                {
-                    hasil = taxYearly - sumTaxPrev - sumTaxPrevbonus - begSalaryPPh21;
-                }
+				if (employeeCondition == PajakTypeData.EmployeeCondition.Transfer)
+				{
+					hasil = taxYearly * lengthCalculationPeriod / 12;
+					hasil = hasil - sumTaxPrev - sumTaxPrevbonus - begSalaryPPh21;
+				}
+				else
+					hasil = taxYearly - sumTaxPrev - sumTaxPrevbonus - begSalaryPPh21;
 			}
 			else if (taxCalculationMethod == PajakTypeData.TaxCalculationMethod.WeightedAverage)
 			{
@@ -151,6 +144,13 @@ namespace testPerhitunganPajak.BusinessDataLayer
 		{
 			decimal hasil = 0;
 			hasil = brutoYearly + brutoBonus;
+			return hasil;
+		}
+
+		public static decimal CalculateTaxBonusMonthly(decimal taxYearly, decimal taxWithBonusYearly)
+		{
+			decimal hasil = 0;
+			hasil = taxWithBonusYearly - taxYearly;
 			return hasil;
 		}
 	}

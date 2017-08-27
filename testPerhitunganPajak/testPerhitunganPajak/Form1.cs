@@ -33,6 +33,14 @@ namespace testPerhitunganPajak
             int tanggungan = 0;
             decimal begSalaryNetto, begSalaryPPh21;
             decimal brutoYearly, jhtYearly, jpYearly, pensionYearly, biayaJabatan, nettoYearly, PTKP, PKP, PPh21Yearly, PPh21Monthly, sumPPh21Prev, sumPPh21PrevBonus;
+	        decimal brutoBonus,
+		        brutoWithBonusYearly,
+		        biayaWithBonusYearly,
+		        biayaJabatanWithBonus,
+		        nettoWithBonusYearly,
+		        PKPWithBonusYearly,
+		        taxWithBonusYearly,
+		        taxBonus;
 
 			List<SalaryEmployeePayment> listPrevPeriodSalaryEmployeePayment = GetData.GetListPrevPeriodSalaryEmployeePayment(employeeId, period.Substring(0, 4), period, taxType);
 			SalaryEmployeePayment currentPeriodSalaryEmployeePayment = GetData.GetSalaryEmployeePayment(employeeId, period, taxType);
@@ -72,21 +80,34 @@ namespace testPerhitunganPajak
             sumPPh21Prev = PajakData.CountPPh21ListPayment(listPrevPeriodSalaryEmployeePayment);
             sumPPh21PrevBonus = PajakData.CountPPh21BonusListPayment(listPrevPeriodSalaryEmployeePayment);
             PPh21Monthly = PajakCalculation.CalculateTaxMonthly(PPh21Yearly, sumPPh21Prev, sumPPh21PrevBonus, periodStart, periodEnd, periodCurent, begSalaryPPh21, taxCalculationMethod, employeeCondition);
-            decimal pph21 = PajakData.CountPPh21(currentPeriodSalaryEmployeePayment);
-            label1.Text = PPh21Monthly.ToString("#,0.00");
-            label2.Text = pph21.ToString("#,0.00");
-            //PPh21Monthly=PajakCalculation.CalculateTaxMonthly(PPh21Yearly,)
-            //PPh21Yearly=PajakCalculation.CalculateTaxYearly(PKP,)
-            //decimal brutoYearly =PajakCalculation.CalculateBrutoYearly(taxCalculationMethod,brutoCurrent,brutoPrev,brutoPrevBonus)
 
-            //Pajak.CalculateBrutoYearly(employeeId, taxCalculationMethod, brutoCurrent, brutoPrev, brutoPrevBonus, 1, 12, int.Parse(period.Substring(4, 2)));
-            //bool fNPWP = true;
-            //decimal brutoCurrent = 0,jhtCurrent=0,jpCurrent=0;
-            //decimal brutoPrev = 19235360,jht;
-            //decimal a = 762036872;
-            //decimal b = Pajak.CalculatePKP(a, Pajak.CalculatePTKP(false, 0));
-            //decimal c = Pajak.CalculateTaxYearly(b,false);
-            //label1.Text = c.ToString("#,0.00");
+	        brutoBonus = PajakData.CountBrutoBonus(currentPeriodSalaryEmployeePayment);
+	        brutoWithBonusYearly = PajakCalculation.CalculateBrutoWithBonusYearly(brutoYearly, brutoBonus);
+	        biayaJabatanWithBonus = PajakCalculation.CalculateBiayaJabatan(brutoWithBonusYearly, periodStart, periodEnd, employeeCondition);
+	        nettoWithBonusYearly = PajakCalculation.CalculateNettoYearly(brutoWithBonusYearly, jhtYearly, jpYearly, pensionYearly, biayaJabatanWithBonus, begSalaryNetto);
+	        PKPWithBonusYearly = PajakCalculation.CalculatePKP(nettoWithBonusYearly, PTKP);
+	        taxWithBonusYearly = PajakCalculation.CalculateTaxYearly(PKPWithBonusYearly, fNPWP);
+	        taxBonus = PajakCalculation.CalculateTaxBonusMonthly(PPh21Yearly, taxWithBonusYearly);
+
+            decimal pph21 = PajakData.CountPPh21(currentPeriodSalaryEmployeePayment);
+	        decimal pph21Bonus = PajakData.CountPPh21Bonus(currentPeriodSalaryEmployeePayment);
+	        decimal pph21Total = pph21 + pph21Bonus;
+            label2.Text = PPh21Monthly.ToString("#,0.00");
+            label1.Text = pph21Total.ToString("#,0.00");
+	        label3.Text = taxBonus.ToString("#,0.00");
+
+	        //PPh21Monthly=PajakCalculation.CalculateTaxMonthly(PPh21Yearly,)
+	        //PPh21Yearly=PajakCalculation.CalculateTaxYearly(PKP,)
+	        //decimal brutoYearly =PajakCalculation.CalculateBrutoYearly(taxCalculationMethod,brutoCurrent,brutoPrev,brutoPrevBonus)
+
+	        //Pajak.CalculateBrutoYearly(employeeId, taxCalculationMethod, brutoCurrent, brutoPrev, brutoPrevBonus, 1, 12, int.Parse(period.Substring(4, 2)));
+	        //bool fNPWP = true;
+	        //decimal brutoCurrent = 0,jhtCurrent=0,jpCurrent=0;
+	        //decimal brutoPrev = 19235360,jht;
+	        //decimal a = 762036872;
+	        //decimal b = Pajak.CalculatePKP(a, Pajak.CalculatePTKP(false, 0));
+	        //decimal c = Pajak.CalculateTaxYearly(b,false);
+	        //label1.Text = c.ToString("#,0.00");
         }
     }
 }
