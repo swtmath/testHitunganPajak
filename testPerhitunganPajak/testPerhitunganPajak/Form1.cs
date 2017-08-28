@@ -35,7 +35,6 @@ namespace testPerhitunganPajak
             decimal brutoYearly, jhtYearly, jpYearly, pensionYearly, biayaJabatan, nettoYearly, PTKP, PKP, PPh21Yearly, PPh21Monthly, sumPPh21Prev, sumPPh21PrevBonus;
 	        decimal brutoBonus,
 		        brutoWithBonusYearly,
-		        biayaWithBonusYearly,
 		        biayaJabatanWithBonus,
 		        nettoWithBonusYearly,
 		        PKPWithBonusYearly,
