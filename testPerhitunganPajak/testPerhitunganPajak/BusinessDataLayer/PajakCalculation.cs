@@ -3,7 +3,15 @@ namespace testPerhitunganPajak.BusinessDataLayer
 {
 	public class PajakCalculation
 	{
-		public static decimal CalculateBrutoYearly(PajakTypeData.TaxCalculationMethod taxCalculationMethod, decimal brutoCurrent, decimal brutoPrev, decimal brutoPrevBonus, int periodStart, int periodEnd, int periodCurrent,PajakTypeData.EmployeeCondition employeeCondition)
+		public static decimal CalculateBrutoYearly(
+			PajakTypeData.TaxCalculationMethod taxCalculationMethod, 
+			decimal brutoCurrent, 
+			decimal brutoPrev, 
+			decimal brutoPrevBonus, 
+			int periodStart, 
+			int periodEnd, 
+			int periodCurrent,
+			PajakTypeData.EmployeeCondition employeeCondition)
 		{
 			decimal hasil = 0;
 			int lengthCalculationPeriod = periodEnd - periodStart + 1;
@@ -36,7 +44,14 @@ namespace testPerhitunganPajak.BusinessDataLayer
 			}
 			return hasil;
 		}
-		public static decimal CalculateBpjsOrPensionYearly(PajakTypeData.TaxCalculationMethod taxCalculationMethod, decimal pensionCurrent, decimal pensionPrev, int periodStart, int periodEnd, int periodCurrent, PajakTypeData.EmployeeCondition employeeCondition)
+		public static decimal CalculateBpjsOrPensionYearly(
+			PajakTypeData.TaxCalculationMethod taxCalculationMethod, 
+			decimal pensionCurrent, 
+			decimal pensionPrev, 
+			int periodStart, 
+			int periodEnd, 
+			int periodCurrent, 
+			PajakTypeData.EmployeeCondition employeeCondition)
 		{
 			decimal hasil = 0;
 			int lengthCalculationPeriod = periodEnd - periodStart + 1;
@@ -68,7 +83,11 @@ namespace testPerhitunganPajak.BusinessDataLayer
 			}
 			return hasil;
 		}
-		public static decimal CalculateBiayaJabatan(decimal bruto, int periodStart, int periodEnd, PajakTypeData.EmployeeCondition employeeCondition)
+		public static decimal CalculateBiayaJabatan(
+			decimal bruto, 
+			int periodStart, 
+			int periodEnd, 
+			PajakTypeData.EmployeeCondition employeeCondition)
 		{
 			decimal hasil = 0;
             int lengthCalculationPeriod;
@@ -77,18 +96,28 @@ namespace testPerhitunganPajak.BusinessDataLayer
             hasil = Min(PajakTypeData.MaxBiayaJabatan * lengthCalculationPeriod / 12, bruto * PajakTypeData.PersentaseBiayaJabatan / 100);
 			return hasil;
 		}
-		public static decimal CalculateNettoYearly(decimal brutoYearly, decimal JHTYearly, decimal JPYearly, decimal pensionYearly, decimal biayaJabatan, decimal begSalaryNetto)
+		public static decimal CalculateNettoYearly(
+			decimal brutoYearly, 
+			decimal JHTYearly, 
+			decimal JPYearly, 
+			decimal pensionYearly, 
+			decimal biayaJabatan, 
+			decimal begSalaryNetto)
 		{
 			return brutoYearly - biayaJabatan - JHTYearly - JPYearly - pensionYearly + begSalaryNetto;
 		}
-		public static decimal CalculatePTKP(bool kawin, int tanggungan)
+		public static decimal CalculatePTKP(
+			bool kawin, 
+			int tanggungan)
 		{
 			decimal hasil = PajakTypeData.PTKPIndividu;
 			if (kawin) hasil += PajakTypeData.PTKPAddOn;
 			hasil = hasil + PajakTypeData.PTKPAddOn * tanggungan;
 			return hasil;
 		}
-		public static decimal CalculatePKP(decimal nettoYearly, decimal PTKP)
+		public static decimal CalculatePKP(
+			decimal nettoYearly, 
+			decimal PTKP)
 		{
 			decimal hasil = 0;
 			hasil = nettoYearly - PTKP;
@@ -96,7 +125,9 @@ namespace testPerhitunganPajak.BusinessDataLayer
 			hasil2 = hasil2 * 1000;
 			return hasil2;
 		}
-		public static decimal CalculateTaxYearly(decimal PKP, bool fNPWP)
+		public static decimal CalculateTaxYearly(
+			decimal PKP, 
+			bool fNPWP)
 		{
 			decimal hasil = 0;
 			hasil = hasil + Max(0, Min(PKP, PajakTypeData.TaxBracketNominal1)) * PajakTypeData.TaxBracketPercentage1 / 100;
@@ -106,7 +137,16 @@ namespace testPerhitunganPajak.BusinessDataLayer
 			if (!fNPWP) hasil = hasil * (100 + PajakTypeData.NoNPWPPercentage) / 100;
 			return hasil;
 		}
-		public static decimal CalculateTaxMonthly(decimal taxYearly, decimal sumTaxPrev, decimal sumTaxPrevbonus, int periodStart, int periodEnd, int periodCurrent, decimal begSalaryPPh21, PajakTypeData.TaxCalculationMethod taxCalculationMethod, PajakTypeData.EmployeeCondition employeeCondition)
+		public static decimal CalculateTaxMonthly(
+			decimal taxYearly, 
+			decimal sumTaxPrev, 
+			decimal sumTaxPrevbonus, 
+			int periodStart, 
+			int periodEnd, 
+			int periodCurrent, 
+			decimal begSalaryPPh21, 
+			PajakTypeData.TaxCalculationMethod taxCalculationMethod, 
+			PajakTypeData.EmployeeCondition employeeCondition)
 		{
 			decimal hasil = 0;
 			int lengthCalculationPeriod = periodEnd - periodStart + 1;
